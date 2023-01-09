@@ -1,0 +1,44 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "code": "123",
+            "value": "текст настройки",
+            "json": false
+        },
+        {
+            "id": 2,
+            "code": "3213",
+            "value": "текст настройки2",
+            "json": false
+        },
+        {
+            "id": 3,
+            "code": "3333",
+            "value": "текст настройки3",
+            "json": false
+        },
+        {
+            "id": 4,
+            "code": "test",
+            "value": [
+                {
+                    "test": "123"
+                },
+                {
+                    "test2": "321"
+                }
+            ],
+            "json": true
+        }
+    ],
+    "meta": {
+        "total": 4,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

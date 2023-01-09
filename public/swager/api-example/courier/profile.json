@@ -1,0 +1,16 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "courier",
+        "phone": "79228109900",
+        "email": "mail@example.com",
+        "photo": "https://mint-food.ru/assets/img/about-company/dir-hover-2.png",
+        "todayDeliveries": 0,
+        "todayLateness": 0,
+        "allDeliveries": 8,
+        "allLateness": 8,
+        "allDays": 1,
+        "workedShifts": 80
+    }
+}

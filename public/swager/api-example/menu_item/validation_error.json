@@ -1,0 +1,11 @@
+{
+    "message": "Invalid parameters",
+    "data": {
+        "name": [
+            "The name field is required."
+        ],
+        "categoryId": [
+            "The category id field is required."
+        ]
+    }
+}

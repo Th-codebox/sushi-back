@@ -1,0 +1,763 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "Суши",
+            "slug": "susi",
+            "description": "Очень вкусные суши для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": null,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Суши калифорния",
+                    "slug": "susi-kaliforniya",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 300,
+                    "type": "single",
+                    "oldPrice": 400,
+                    "bonusAdd": 100,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": true,
+                    "needPersonCount": true,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 1,
+                            "modification_id": 2,
+                            "actualPrice": 235,
+                            "actualCharacteristicTechCard": {
+                                "weight": 180,
+                                "proteins": 100,
+                                "fats": 15,
+                                "carbohydrates": 15,
+                                "calories": 125
+                            },
+                            "name": "Половинка ролла",
+                            "action": "subtract",
+                            "type": "single",
+                            "nameOff": "",
+                            "nameOn": "половинка",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 500,
+                        "proteins": 300,
+                        "fats": 50,
+                        "carbohydrates": 200,
+                        "calories": 180
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 2,
+                    "name": "Роллы филадельфия",
+                    "slug": "rolly-filadelfiya",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 400,
+                    "type": "single",
+                    "oldPrice": 450,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 2,
+                            "modification_id": 2,
+                            "actualPrice": 250,
+                            "actualCharacteristicTechCard": {
+                                "weight": 180,
+                                "proteins": 100,
+                                "fats": 15,
+                                "carbohydrates": 15,
+                                "calories": 125
+                            },
+                            "name": "Половинка ролла",
+                            "action": "subtract",
+                            "type": "single",
+                            "nameOff": "",
+                            "nameOn": "половинка",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 300,
+                        "proteins": 200,
+                        "fats": 30,
+                        "carbohydrates": 30,
+                        "calories": 250
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 3,
+                    "name": "Роллы итальяно",
+                    "slug": "rolly-italyano",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 250,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 3,
+                            "modification_id": 2,
+                            "actualPrice": 175,
+                            "actualCharacteristicTechCard": {
+                                "weight": 180,
+                                "proteins": 100,
+                                "fats": 15,
+                                "carbohydrates": 15,
+                                "calories": 125
+                            },
+                            "name": "Половинка ролла",
+                            "action": "subtract",
+                            "type": "single",
+                            "nameOff": "",
+                            "nameOn": "половинка",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 360,
+                        "proteins": 200,
+                        "fats": 30,
+                        "carbohydrates": 30,
+                        "calories": 250
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 4,
+                    "name": "Роллы хирасима",
+                    "slug": "rolly-xirasima",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 400,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 4,
+                            "modification_id": 2,
+                            "actualPrice": 250,
+                            "actualCharacteristicTechCard": {
+                                "weight": 180,
+                                "proteins": 100,
+                                "fats": 15,
+                                "carbohydrates": 15,
+                                "calories": 125
+                            },
+                            "name": "Половинка ролла",
+                            "action": "subtract",
+                            "type": "single",
+                            "nameOff": "",
+                            "nameOn": "половинка",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 360,
+                        "proteins": 200,
+                        "fats": 30,
+                        "carbohydrates": 30,
+                        "calories": 250
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 10,
+                    "name": "супер набор роллов",
+                    "slug": "super-nabor-rollov",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 1000,
+                    "type": "bundle",
+                    "oldPrice": 1500,
+                    "bonusAdd": 300,
+                    "stickerType": "",
+                    "stickerMarketing": "hit",
+                    "hasStop": false,
+                    "needPersonCount": true,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 2250,
+                        "proteins": 750,
+                        "fats": 855,
+                        "carbohydrates": 630,
+                        "calories": 1340
+                    },
+                    "bundleItems": [
+                        {
+                            "id": 1,
+                            "menuItem": {
+                                "id": 1,
+                                "name": "Суши калифорния",
+                                "description": "Очень вкусные суши для вас!",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:24:58",
+                                "updatedAt": "2021-02-14 18:24:58"
+                            },
+                            "modificationMenuItem": {
+                                "id": 1,
+                                "name": "Половинка ролла",
+                                "nameOff": "",
+                                "nameOn": "половинка"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "menuItem": {
+                                "id": 2,
+                                "name": "Роллы филадельфия",
+                                "description": "Очень вкусные суши для вас!",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:26:05",
+                                "updatedAt": "2021-02-14 18:26:05"
+                            },
+                            "modificationMenuItem": {
+                                "id": 1,
+                                "name": "Половинка ролла",
+                                "nameOff": "",
+                                "nameOn": "половинка"
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "menuItem": {
+                                "id": 2,
+                                "name": "Роллы филадельфия",
+                                "description": "Очень вкусные суши для вас!",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:26:05",
+                                "updatedAt": "2021-02-14 18:26:05"
+                            },
+                            "modificationMenuItem": {
+                                "id": 3,
+                                "name": "Половинка ролла",
+                                "nameOff": "",
+                                "nameOn": "половинка"
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "menuItem": {
+                                "id": 7,
+                                "name": "компот вишневый",
+                                "description": "кола",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:28:39",
+                                "updatedAt": "2021-02-14 18:39:03"
+                            },
+                            "modificationMenuItem": null
+                        }
+                    ]
+                }
+            ],
+            "collections": []
+        },
+        {
+            "id": 2,
+            "name": "Пицца",
+            "slug": "picca",
+            "description": "Очень вкусная пицца для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": null,
+            "menuItems": [
+                {
+                    "id": 11,
+                    "name": "Пицца пеперерони",
+                    "slug": "picca-pepereroni",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 500,
+                    "type": "single",
+                    "oldPrice": 400,
+                    "bonusAdd": 100,
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 5,
+                            "modification_id": 1,
+                            "actualPrice": 600,
+                            "actualCharacteristicTechCard": {
+                                "weight": 4350,
+                                "proteins": 1750,
+                                "fats": 1855,
+                                "carbohydrates": 1730,
+                                "calories": 2940
+                            },
+                            "name": "Сырный бортик",
+                            "action": "add",
+                            "type": "single",
+                            "nameOff": "ржаная корка",
+                            "nameOn": "c сырным бортиком",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 1000,
+                        "proteins": 500,
+                        "fats": 500,
+                        "carbohydrates": 500,
+                        "calories": 800
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 12,
+                    "name": "Пицца гавайская",
+                    "slug": "picca-gavaiskaya",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 600,
+                    "type": "single",
+                    "oldPrice": 700,
+                    "bonusAdd": 100,
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 6,
+                            "modification_id": 1,
+                            "actualPrice": 700,
+                            "actualCharacteristicTechCard": {
+                                "weight": 4350,
+                                "proteins": 1750,
+                                "fats": 1855,
+                                "carbohydrates": 1730,
+                                "calories": 2940
+                            },
+                            "name": "Сырный бортик",
+                            "action": "add",
+                            "type": "single",
+                            "nameOff": "ржаная корка",
+                            "nameOn": "c сырным бортиком",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 1000,
+                        "proteins": 400,
+                        "fats": 400,
+                        "carbohydrates": 500,
+                        "calories": 700
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 13,
+                    "name": "Пицца деревенская",
+                    "slug": "picca-derevenskaya",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 600,
+                    "type": "single",
+                    "oldPrice": 700,
+                    "bonusAdd": 100,
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "Рис, лосось, кунжут",
+                    "modifications": [
+                        {
+                            "id": 7,
+                            "modification_id": 1,
+                            "actualPrice": 700,
+                            "actualCharacteristicTechCard": {
+                                "weight": 4350,
+                                "proteins": 1750,
+                                "fats": 1855,
+                                "carbohydrates": 1730,
+                                "calories": 2940
+                            },
+                            "name": "Сырный бортик",
+                            "action": "add",
+                            "type": "single",
+                            "nameOff": "ржаная корка",
+                            "nameOn": "c сырным бортиком",
+                            "active": false
+                        }
+                    ],
+                    "technicalCard": {
+                        "weight": 2250,
+                        "proteins": 750,
+                        "fats": 855,
+                        "carbohydrates": 630,
+                        "calories": 1340
+                    },
+                    "bundleItems": []
+                }
+            ],
+            "collections": []
+        },
+        {
+            "id": 3,
+            "name": "Комбо наборы",
+            "slug": "kombo-nabory",
+            "description": "Очень вкусная пицца для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": null,
+            "menuItems": [
+                {
+                    "id": 10,
+                    "name": "супер набор роллов",
+                    "slug": "super-nabor-rollov",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 1000,
+                    "type": "bundle",
+                    "oldPrice": 1500,
+                    "bonusAdd": 300,
+                    "stickerType": "",
+                    "stickerMarketing": "hit",
+                    "hasStop": false,
+                    "needPersonCount": true,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 3300,
+                        "proteins": 1100,
+                        "fats": 910,
+                        "carbohydrates": 760,
+                        "calories": 1680
+                    },
+                    "bundleItems": [
+                        {
+                            "id": 1,
+                            "menuItem": {
+                                "id": 1,
+                                "name": "Суши калифорния",
+                                "description": "Очень вкусные суши для вас!",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:24:58",
+                                "updatedAt": "2021-02-14 18:24:58"
+                            },
+                            "modificationMenuItem": {
+                                "id": 1,
+                                "name": "Половинка ролла",
+                                "nameOff": "",
+                                "nameOn": "половинка"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "menuItem": {
+                                "id": 2,
+                                "name": "Роллы филадельфия",
+                                "description": "Очень вкусные суши для вас!",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:26:05",
+                                "updatedAt": "2021-02-14 18:26:05"
+                            },
+                            "modificationMenuItem": {
+                                "id": 1,
+                                "name": "Половинка ролла",
+                                "nameOff": "",
+                                "nameOn": "половинка"
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "menuItem": {
+                                "id": 2,
+                                "name": "Роллы филадельфия",
+                                "description": "Очень вкусные суши для вас!",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:26:05",
+                                "updatedAt": "2021-02-14 18:26:05"
+                            },
+                            "modificationMenuItem": {
+                                "id": 3,
+                                "name": "Половинка ролла",
+                                "nameOff": "",
+                                "nameOn": "половинка"
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "menuItem": {
+                                "id": 7,
+                                "name": "компот вишневый",
+                                "description": "кола",
+                                "stickerType": "",
+                                "stickerMarketing": "",
+                                "image": null,
+                                "createdAt": "2021-02-14 18:28:39",
+                                "updatedAt": "2021-02-14 18:39:03"
+                            },
+                            "modificationMenuItem": null
+                        }
+                    ]
+                }
+            ],
+            "collections": []
+        },
+        {
+            "id": 4,
+            "name": "напитки",
+            "slug": "napitki",
+            "description": "Очень вкусные суши для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": null,
+            "menuItems": [
+                {
+                    "id": 5,
+                    "name": "Кока кола",
+                    "slug": "koka-kola",
+                    "description": "кола",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 70,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 500,
+                        "proteins": 0,
+                        "fats": 0,
+                        "carbohydrates": 0,
+                        "calories": 0
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 6,
+                    "name": "компот",
+                    "slug": "kompot",
+                    "description": "кола",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 100,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 500,
+                        "proteins": 0,
+                        "fats": 0,
+                        "carbohydrates": 0,
+                        "calories": 0
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 7,
+                    "name": "компот вишневый",
+                    "slug": "kompot-visnevyi",
+                    "description": "кола",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 100,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 500,
+                        "proteins": 0,
+                        "fats": 0,
+                        "carbohydrates": 0,
+                        "calories": 0
+                    },
+                    "bundleItems": []
+                }
+            ],
+            "collections": []
+        },
+        {
+            "id": 5,
+            "name": "Другое",
+            "slug": "drugoe",
+            "description": "Очень вкусные суши для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": null,
+            "menuItems": [
+                {
+                    "id": 8,
+                    "name": "кетчуп",
+                    "slug": "ketcup",
+                    "description": "кола",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 40,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 50,
+                        "proteins": 0,
+                        "fats": 0,
+                        "carbohydrates": 0,
+                        "calories": 0
+                    },
+                    "bundleItems": []
+                },
+                {
+                    "id": 9,
+                    "name": "горчица",
+                    "slug": "gorcica",
+                    "description": "кола",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": 40,
+                    "type": "single",
+                    "oldPrice": 0,
+                    "bonusAdd": 150,
+                    "stickerType": "",
+                    "stickerMarketing": "",
+                    "hasStop": false,
+                    "needPersonCount": false,
+                    "image": null,
+                    "composition": "",
+                    "modifications": [],
+                    "technicalCard": {
+                        "weight": 50,
+                        "proteins": 0,
+                        "fats": 0,
+                        "carbohydrates": 0,
+                        "calories": 0
+                    },
+                    "bundleItems": []
+                }
+            ],
+            "collections": [
+                {
+                    "id": 1,
+                    "name": "Супер комбо",
+                    "subTitle": "Дополнительный заголвок",
+                    "image": null,
+                    "slug": "slug",
+                    "ico": "/example/image.jpg",
+                    "type": "desktop",
+                    "target": "home",
+                    "description": "Супе комбо для всей семьи!"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "total": 5,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "sort": [],
+            "search": [],
+            "conditions": [],
+            "page": "1",
+            "withoutRelation": false
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "code": 200,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NybVwvYXV0aFwvcmVmcmVzaCIsImlhdCI6MTYxMTAwNDg2NywiZXhwIjoxNjExMDEzMzQxLCJuYmYiOjE2MTEwMDk3NDEsImp0aSI6ImVaUTkyMGd5eEsxWVpGbVgiLCJzdWIiOjEsInBydiI6IjdjYzkzNmRiNmM5NmQzZDkwNDY3OTg5M2Q0Mzc4ZmNiYzc2ZTIxMWYifQ.4hWQUjF0V6XaQXRORKUhJUxSR4A03Ye2grnqxbNDmPY",
+    "token_type": "bearer",
+    "expires_in": 3600
+}

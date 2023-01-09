@@ -1,0 +1,29 @@
+{
+    "name": "djjerry85/atol-kkm-client",
+    "type": "library",
+    "description": "HTTP Client for using with kkmserver. Fork zeroabe/atol-kkm-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikhail A Musofranov",
+            "email": "elremz@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "KKMClient\\": "src/",
+            "Autoload\\": "src/Autoload"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "ramsey/uuid": "^4.1",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "jms/serializer": "^1.7",
+        "kherge/json": "^2.0",
+        "doctrine/common": "^3.1"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    }
+}

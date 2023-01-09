@@ -1,0 +1,6 @@
+{
+    "code": 401,
+    "message": "Неавторизованный!",
+    "exception": "Illuminate\\Auth\\AuthenticationException",
+    "data": null
+}

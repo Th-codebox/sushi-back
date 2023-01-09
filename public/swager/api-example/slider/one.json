@@ -1,0 +1,15 @@
+{
+    "code": 200,
+    "data": {
+        "id": 2,
+        "name": "слайдер 2",
+        "link": "https://test.ru",
+        "target": "home",
+        "desktopImage": null,
+        "mobileImage": null,
+        "status": true,
+        "sortOrder": 1,
+        "updatedAt": "2021-02-26 10:29:48",
+        "createdAt": "2021-02-26 10:29:48"
+    }
+}

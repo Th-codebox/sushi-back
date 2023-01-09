@@ -1,0 +1,392 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": null,
+        "phone": "79228109900",
+        "email": null,
+        "status": 1,
+        "referralPromoCode": "ФОКС-954",
+        "birthday": null,
+        "lastVisitAt": null,
+        "clientAddresses": [],
+        "orders": [
+            {
+                "fullName": 0,
+                "code": "1",
+                "courierCell": "01",
+                "deliveryPrice": 0,
+                "deliveryType": "",
+                "totalPrice": 0,
+                "paymentType": "",
+                "orderStatus": "completed",
+                "basket": {
+                    "id": 1,
+                    "deliveryPrice": 0,
+                    "deliveryType": "",
+                    "totalPrice": 300,
+                    "paymentType": "",
+                    "dateDelivery": "",
+                    "timeDelivery": "",
+                    "clientMoney": 0,
+                    "toDatetime": false,
+                    "persons": 0,
+                    "comment": "",
+                    "commentForCourier": "",
+                    "items": [
+                        {
+                            "id": 1,
+                            "type": "usual",
+                            "comment": "",
+                            "free": false,
+                            "price": 300,
+                            "modificationMenuItem": null,
+                            "menuItem": {
+                                "id": 1,
+                                "name": "Тестовый продукт 1",
+                                "slug": "roll-test",
+                                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "h1": "h1",
+                                "metaTitle": "",
+                                "metaDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "price": 300,
+                                "type": "single",
+                                "oldPrice": 370,
+                                "bonusAdd": 20,
+                                "stickerType": "spicy",
+                                "stickerMarketing": "hit",
+                                "hasStop": false,
+                                "needPersonCount": false,
+                                "image": null,
+                                "composition": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "modifications": [
+                                    {
+                                        "id": 1,
+                                        "modification_id": 1,
+                                        "actualPrice": 230,
+                                        "actualCharacteristicTechCard": {
+                                            "weight": 172,
+                                            "proteins": 9,
+                                            "fats": 17,
+                                            "carbohydrates": 96,
+                                            "calories": 117
+                                        },
+                                        "name": "Половинка ролла",
+                                        "action": "subtract",
+                                        "type": "select",
+                                        "nameOff": "целый",
+                                        "nameOn": "половинка",
+                                        "active": false
+                                    }
+                                ],
+                                "technicalCard": {
+                                    "weight": 345,
+                                    "proteins": 19,
+                                    "fats": 34,
+                                    "carbohydrates": 193,
+                                    "calories": 234
+                                },
+                                "bundleItems": []
+                            },
+                            "techCardForConstruct": null,
+                            "menuItemId": 1,
+                            "modificationMenuItemId": null,
+                            "subMenuItemId": null,
+                            "quantity": 1
+                        }
+                    ],
+                    "noCall": 0,
+                    "showButtonNoCall": true,
+                    "needPersonsCount": false,
+                    "promoCode": null,
+                    "cookingAndDeliveryTime": 20
+                },
+                "cookingAndDeliveryTimeInMinutes": 0.3333333333333333,
+                "createdAt": null
+            },
+            {
+                "fullName": 0,
+                "code": "1",
+                "courierCell": "0",
+                "deliveryPrice": 0,
+                "deliveryType": "",
+                "totalPrice": 0,
+                "paymentType": "",
+                "orderStatus": "inDelivery",
+                "basket": {
+                    "id": 1,
+                    "deliveryPrice": 0,
+                    "deliveryType": "",
+                    "totalPrice": 300,
+                    "paymentType": "",
+                    "dateDelivery": "",
+                    "timeDelivery": "",
+                    "clientMoney": 0,
+                    "toDatetime": false,
+                    "persons": 0,
+                    "comment": "",
+                    "commentForCourier": "",
+                    "items": [
+                        {
+                            "id": 1,
+                            "type": "usual",
+                            "comment": "",
+                            "free": false,
+                            "price": 300,
+                            "modificationMenuItem": null,
+                            "menuItem": {
+                                "id": 1,
+                                "name": "Тестовый продукт 1",
+                                "slug": "roll-test",
+                                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "h1": "h1",
+                                "metaTitle": "",
+                                "metaDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "price": 300,
+                                "type": "single",
+                                "oldPrice": 370,
+                                "bonusAdd": 20,
+                                "stickerType": "spicy",
+                                "stickerMarketing": "hit",
+                                "hasStop": false,
+                                "needPersonCount": false,
+                                "image": null,
+                                "composition": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "modifications": [
+                                    {
+                                        "id": 1,
+                                        "modification_id": 1,
+                                        "actualPrice": 230,
+                                        "actualCharacteristicTechCard": {
+                                            "weight": 172,
+                                            "proteins": 9,
+                                            "fats": 17,
+                                            "carbohydrates": 96,
+                                            "calories": 117
+                                        },
+                                        "name": "Половинка ролла",
+                                        "action": "subtract",
+                                        "type": "select",
+                                        "nameOff": "целый",
+                                        "nameOn": "половинка",
+                                        "active": false
+                                    }
+                                ],
+                                "technicalCard": {
+                                    "weight": 345,
+                                    "proteins": 19,
+                                    "fats": 34,
+                                    "carbohydrates": 193,
+                                    "calories": 234
+                                },
+                                "bundleItems": []
+                            },
+                            "techCardForConstruct": null,
+                            "menuItemId": 1,
+                            "modificationMenuItemId": null,
+                            "subMenuItemId": null,
+                            "quantity": 1
+                        }
+                    ],
+                    "noCall": 0,
+                    "showButtonNoCall": true,
+                    "needPersonsCount": false,
+                    "promoCode": null,
+                    "cookingAndDeliveryTime": 20
+                },
+                "cookingAndDeliveryTimeInMinutes": 0.3333333333333333,
+                "createdAt": null
+            },
+            {
+                "fullName": 0,
+                "code": "1",
+                "courierCell": "0",
+                "deliveryPrice": 0,
+                "deliveryType": "",
+                "totalPrice": 0,
+                "paymentType": "",
+                "orderStatus": "inDelivery",
+                "basket": {
+                    "id": 1,
+                    "deliveryPrice": 0,
+                    "deliveryType": "",
+                    "totalPrice": 300,
+                    "paymentType": "",
+                    "dateDelivery": "",
+                    "timeDelivery": "",
+                    "clientMoney": 0,
+                    "toDatetime": false,
+                    "persons": 0,
+                    "comment": "",
+                    "commentForCourier": "",
+                    "items": [
+                        {
+                            "id": 1,
+                            "type": "usual",
+                            "comment": "",
+                            "free": false,
+                            "price": 300,
+                            "modificationMenuItem": null,
+                            "menuItem": {
+                                "id": 1,
+                                "name": "Тестовый продукт 1",
+                                "slug": "roll-test",
+                                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "h1": "h1",
+                                "metaTitle": "",
+                                "metaDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "price": 300,
+                                "type": "single",
+                                "oldPrice": 370,
+                                "bonusAdd": 20,
+                                "stickerType": "spicy",
+                                "stickerMarketing": "hit",
+                                "hasStop": false,
+                                "needPersonCount": false,
+                                "image": null,
+                                "composition": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                                "modifications": [
+                                    {
+                                        "id": 1,
+                                        "modification_id": 1,
+                                        "actualPrice": 230,
+                                        "actualCharacteristicTechCard": {
+                                            "weight": 172,
+                                            "proteins": 9,
+                                            "fats": 17,
+                                            "carbohydrates": 96,
+                                            "calories": 117
+                                        },
+                                        "name": "Половинка ролла",
+                                        "action": "subtract",
+                                        "type": "select",
+                                        "nameOff": "целый",
+                                        "nameOn": "половинка",
+                                        "active": false
+                                    }
+                                ],
+                                "technicalCard": {
+                                    "weight": 345,
+                                    "proteins": 19,
+                                    "fats": 34,
+                                    "carbohydrates": 193,
+                                    "calories": 234
+                                },
+                                "bundleItems": []
+                            },
+                            "techCardForConstruct": null,
+                            "menuItemId": 1,
+                            "modificationMenuItemId": null,
+                            "subMenuItemId": null,
+                            "quantity": 1
+                        }
+                    ],
+                    "noCall": 0,
+                    "showButtonNoCall": true,
+                    "needPersonsCount": false,
+                    "promoCode": null,
+                    "cookingAndDeliveryTime": 20
+                },
+                "cookingAndDeliveryTimeInMinutes": 0.3333333333333333,
+                "createdAt": null
+            }
+        ],
+        "clientPromoCodes": [
+            {
+                "id": 1,
+                "promoCode": {
+                    "id": 4,
+                    "name": "Скидка 300 рублей",
+                    "description": null,
+                    "code": "300SALE",
+                    "salePercent": 0,
+                    "saleSubtraction": 30000,
+                    "time_on": null,
+                    "time_end": null,
+                    "onlyFirstOrder": false,
+                    "sort_order": 0
+                },
+                "activated": false,
+                "deadLine": null,
+                "activatedAt": null,
+                "createAt": "2021-02-18T10:15:36.000000Z"
+            },
+            {
+                "id": 2,
+                "promoCode": {
+                    "id": 4,
+                    "name": "Скидка 300 рублей",
+                    "description": null,
+                    "code": "300SALE",
+                    "salePercent": 0,
+                    "saleSubtraction": 30000,
+                    "time_on": null,
+                    "time_end": null,
+                    "onlyFirstOrder": false,
+                    "sort_order": 0
+                },
+                "activated": false,
+                "deadLine": null,
+                "activatedAt": null,
+                "createAt": "2021-02-18T10:15:50.000000Z"
+            },
+            {
+                "id": 3,
+                "promoCode": {
+                    "id": 4,
+                    "name": "Скидка 300 рублей",
+                    "description": null,
+                    "code": "300SALE",
+                    "salePercent": 0,
+                    "saleSubtraction": 30000,
+                    "time_on": null,
+                    "time_end": null,
+                    "onlyFirstOrder": false,
+                    "sort_order": 0
+                },
+                "activated": false,
+                "deadLine": null,
+                "activatedAt": null,
+                "createAt": "2021-02-18T10:15:52.000000Z"
+            },
+            {
+                "id": 4,
+                "promoCode": {
+                    "id": 3,
+                    "name": "Удвоение заказа",
+                    "description": null,
+                    "code": "DOUBLE",
+                    "salePercent": 0,
+                    "saleSubtraction": 0,
+                    "time_on": null,
+                    "time_end": null,
+                    "onlyFirstOrder": false,
+                    "sort_order": 0
+                },
+                "activated": false,
+                "deadLine": null,
+                "activatedAt": null,
+                "createAt": "2021-02-18T10:17:53.000000Z"
+            },
+            {
+                "id": 5,
+                "promoCode": {
+                    "id": 5,
+                    "name": "С днём рождения!",
+                    "description": "С днём рождения!",
+                    "code": "TEST",
+                    "salePercent": 0,
+                    "saleSubtraction": 0,
+                    "time_on": null,
+                    "time_end": null,
+                    "onlyFirstOrder": false,
+                    "sort_order": 1
+                },
+                "activated": false,
+                "deadLine": null,
+                "activatedAt": null,
+                "createAt": "2021-02-18T10:18:04.000000Z"
+            }
+        ]
+    }
+}

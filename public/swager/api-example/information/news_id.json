@@ -1,0 +1,30 @@
+{
+    "code": 200,
+    "data": {
+        "id": 3,
+        "name": "Новость 1",
+        "slug": "novost-1",
+        "description": "Очень вкусные суши для вас!",
+        "descriptionBeforePromoCode": "Очень вкусные суши для вас!",
+        "descriptionAfterPromoCode": "Очень вкусные суши для вас!",
+        "h1": "",
+        "metaTitle": "metaTitle",
+        "metaDescription": "metaDescription",
+        "status": true,
+        "sortOrder": 1,
+        "image": null,
+        "date": "10-10-22",
+        "promoCode": {
+            "id": 1,
+            "name": "С днём рождения!",
+            "description": null,
+            "code": "BIRTHDAY",
+            "salePercent": 30,
+            "saleSubtraction": 0,
+            "timeOn": null,
+            "timeEnd": null,
+            "onlyFirstOrder": false,
+            "sortOrder": 0
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 2,
+            "name": "Новость 2",
+            "slug": "novost-2",
+            "description": "Очень вкусные суши для вас!",
+            "descriptionBeforePromoCode": "Очень вкусные суши для вас!",
+            "descriptionAfterPromoCode": "Очень вкусные суши для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "status": true,
+            "sortOrder": 1,
+            "image": null,
+            "date": "2022-10-11",
+            "updatedAt": "2021-02-25 19:36:45",
+            "createdAt": "2021-02-25 19:24:40",
+            "promoCode": {
+                "id": 1,
+                "name": "С днём рождения!",
+                "description": null,
+                "code": "BIRTHDAY",
+                "salePercent": 30,
+                "saleSubtraction": 0,
+                "time_on": null,
+                "time_end": null,
+                "type": "personal",
+                "action": "birthDay",
+                "onlyFirstOrder": false,
+                "status": true,
+                "sort_order": 0
+            }
+        },
+        {
+            "id": 3,
+            "name": "Новость 1",
+            "slug": "novost-1",
+            "description": "Очень вкусные суши для вас!",
+            "descriptionBeforePromoCode": "Очень вкусные суши для вас!",
+            "descriptionAfterPromoCode": "Очень вкусные суши для вас!",
+            "h1": "",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "status": true,
+            "sortOrder": 1,
+            "image": null,
+            "date": "2022-10-10",
+            "updatedAt": "2021-02-25 19:35:22",
+            "createdAt": "2021-02-25 19:35:22",
+            "promoCode": {
+                "id": 1,
+                "name": "С днём рождения!",
+                "description": null,
+                "code": "BIRTHDAY",
+                "salePercent": 30,
+                "saleSubtraction": 0,
+                "time_on": null,
+                "time_end": null,
+                "type": "personal",
+                "action": "birthDay",
+                "onlyFirstOrder": false,
+                "status": true,
+                "sort_order": 0
+            }
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "0": {
+        "count": 1,
+        "ruName": "Новый заказ",
+        "filterParam": "new"
+    },
+    "1": {
+        "count": 0,
+        "ruName": "Ожидает оплаты",
+        "filterParam": "waitPayment"
+    },
+    "2": {
+        "count": 0,
+        "ruName": "Потверждён",
+        "filterParam": "confirm"
+    },
+    "3": {
+        "count": 0,
+        "ruName": "Готовится",
+        "filterParam": "preparing"
+    },
+    "4": {
+        "count": 0,
+        "ruName": "В сборке",
+        "filterParam": "assembly"
+    },
+    "5": {
+        "count": 0,
+        "ruName": "Готов к выдаче",
+        "filterParam": "readyForIssue"
+    },
+    "6": {
+        "count": 3,
+        "ruName": "В доставке",
+        "filterParam": "inDelivery"
+    },
+    "7": {
+        "count": 2,
+        "ruName": "Завершён",
+        "filterParam": "completed"
+    },
+    "8": {
+        "count": 0,
+        "ruName": "Отменён",
+        "filterParam": "canceled"
+    },
+    "9": {
+        "count": 2,
+        "ruName": "Опоздания",
+        "filterParam": "lateness"
+    },
+    "10": {
+        "count": 0,
+        "ruName": "Агрегаторы",
+        "filterParam": "aggregate"
+    },
+    "11": {
+        "count": 6,
+        "ruName": "Все",
+        "filterParam": "all"
+    },
+    "code": 200
+}

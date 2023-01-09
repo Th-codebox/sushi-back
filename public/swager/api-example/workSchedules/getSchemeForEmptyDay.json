@@ -1,0 +1,434 @@
+{
+    "code": 200,
+    "data": [
+        {
+            "groupName": "Курьеры",
+            "groupId": 2,
+            "workspaces": [
+                {
+                    "name": "Курьер №1",
+                    "workSpaceId": 45,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [
+                        {
+                            "id": 2,
+                            "role_id": 2,
+                            "name": "тестовый курьер",
+                            "image": null,
+                            "phone": "79999999999",
+                            "email": "courier@example.com",
+                            "status": 1,
+                            "last_visit_at": null,
+                            "created_at": "2021-02-15T09:40:44.000000Z",
+                            "updated_at": "2021-02-15T09:40:44.000000Z",
+                            "deleted_at": null,
+                            "role": {
+                                "id": 2,
+                                "name": "Курьер",
+                                "description": null,
+                                "sort_order": 0,
+                                "status": 1,
+                                "created_at": "2021-02-15T09:40:44.000000Z",
+                                "updated_at": "2021-02-15T09:40:44.000000Z",
+                                "deleted_at": null
+                            }
+                        }
+                    ],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Курьер №2",
+                    "workSpaceId": 46,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [
+                        {
+                            "id": 2,
+                            "role_id": 2,
+                            "name": "тестовый курьер",
+                            "image": null,
+                            "phone": "79999999999",
+                            "email": "courier@example.com",
+                            "status": 1,
+                            "last_visit_at": null,
+                            "created_at": "2021-02-15T09:40:44.000000Z",
+                            "updated_at": "2021-02-15T09:40:44.000000Z",
+                            "deleted_at": null,
+                            "role": {
+                                "id": 2,
+                                "name": "Курьер",
+                                "description": null,
+                                "sort_order": 0,
+                                "status": 1,
+                                "created_at": "2021-02-15T09:40:44.000000Z",
+                                "updated_at": "2021-02-15T09:40:44.000000Z",
+                                "deleted_at": null
+                            }
+                        }
+                    ],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Курьер №3",
+                    "workSpaceId": 47,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [
+                        {
+                            "id": 2,
+                            "role_id": 2,
+                            "name": "тестовый курьер",
+                            "image": null,
+                            "phone": "79999999999",
+                            "email": "courier@example.com",
+                            "status": 1,
+                            "last_visit_at": null,
+                            "created_at": "2021-02-15T09:40:44.000000Z",
+                            "updated_at": "2021-02-15T09:40:44.000000Z",
+                            "deleted_at": null,
+                            "role": {
+                                "id": 2,
+                                "name": "Курьер",
+                                "description": null,
+                                "sort_order": 0,
+                                "status": 1,
+                                "created_at": "2021-02-15T09:40:44.000000Z",
+                                "updated_at": "2021-02-15T09:40:44.000000Z",
+                                "deleted_at": null
+                            }
+                        }
+                    ],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Курьер №4",
+                    "workSpaceId": 48,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [
+                        {
+                            "id": 2,
+                            "role_id": 2,
+                            "name": "тестовый курьер",
+                            "image": null,
+                            "phone": "79999999999",
+                            "email": "courier@example.com",
+                            "status": 1,
+                            "last_visit_at": null,
+                            "created_at": "2021-02-15T09:40:44.000000Z",
+                            "updated_at": "2021-02-15T09:40:44.000000Z",
+                            "deleted_at": null,
+                            "role": {
+                                "id": 2,
+                                "name": "Курьер",
+                                "description": null,
+                                "sort_order": 0,
+                                "status": 1,
+                                "created_at": "2021-02-15T09:40:44.000000Z",
+                                "updated_at": "2021-02-15T09:40:44.000000Z",
+                                "deleted_at": null
+                            }
+                        }
+                    ],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Курьер №5",
+                    "workSpaceId": 49,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [
+                        {
+                            "id": 2,
+                            "role_id": 2,
+                            "name": "тестовый курьер",
+                            "image": null,
+                            "phone": "79999999999",
+                            "email": "courier@example.com",
+                            "status": 1,
+                            "last_visit_at": null,
+                            "created_at": "2021-02-15T09:40:44.000000Z",
+                            "updated_at": "2021-02-15T09:40:44.000000Z",
+                            "deleted_at": null,
+                            "role": {
+                                "id": 2,
+                                "name": "Курьер",
+                                "description": null,
+                                "sort_order": 0,
+                                "status": 1,
+                                "created_at": "2021-02-15T09:40:44.000000Z",
+                                "updated_at": "2021-02-15T09:40:44.000000Z",
+                                "deleted_at": null
+                            }
+                        }
+                    ],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Курьер №6",
+                    "workSpaceId": 50,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [
+                        {
+                            "id": 2,
+                            "role_id": 2,
+                            "name": "тестовый курьер",
+                            "image": null,
+                            "phone": "79999999999",
+                            "email": "courier@example.com",
+                            "status": 1,
+                            "last_visit_at": null,
+                            "created_at": "2021-02-15T09:40:44.000000Z",
+                            "updated_at": "2021-02-15T09:40:44.000000Z",
+                            "deleted_at": null,
+                            "role": {
+                                "id": 2,
+                                "name": "Курьер",
+                                "description": null,
+                                "sort_order": 0,
+                                "status": 1,
+                                "created_at": "2021-02-15T09:40:44.000000Z",
+                                "updated_at": "2021-02-15T09:40:44.000000Z",
+                                "deleted_at": null
+                            }
+                        }
+                    ],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                }
+            ]
+        },
+        {
+            "groupName": "Менеджеры",
+            "groupId": 3,
+            "workspaces": [
+                {
+                    "name": "Менеджер №1",
+                    "workSpaceId": 51,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Менеджер №2",
+                    "workSpaceId": 52,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                }
+            ]
+        },
+        {
+            "groupName": "Повара горячего цеха",
+            "groupId": 4,
+            "workspaces": [
+                {
+                    "name": "Повар горячего цеха №1",
+                    "workSpaceId": 53,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Повар горячего цеха №2",
+                    "workSpaceId": 54,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Повар горячего цеха №3",
+                    "workSpaceId": 55,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Повар горячего цеха №4",
+                    "workSpaceId": 56,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                }
+            ]
+        },
+        {
+            "groupName": "Повара холоднего цеха",
+            "groupId": 5,
+            "workspaces": [
+                {
+                    "name": "Повар холоднего цеха цеха №1",
+                    "workSpaceId": 57,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Повар холоднего цеха цеха №2",
+                    "workSpaceId": 58,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Повар холоднего цеха цеха №3",
+                    "workSpaceId": 59,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                },
+                {
+                    "name": "Повар холоднего цеха цеха №4",
+                    "workSpaceId": 60,
+                    "isReserve": 1,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                }
+            ]
+        },
+        {
+            "groupName": "Администраторы",
+            "groupId": 6,
+            "workspaces": [
+                {
+                    "name": "Администратор",
+                    "workSpaceId": 61,
+                    "isReserve": 0,
+                    "date": "2021-02-26T00:00:00.000000Z",
+                    "shiftTime": null,
+                    "userId": null,
+                    "users": [],
+                    "shiftTimes": [
+                        "full",
+                        "second",
+                        "first",
+                        "offDay"
+                    ]
+                }
+            ]
+        }
+    ]
+}

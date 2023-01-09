@@ -1,0 +1,192 @@
+<wsdl:definitions xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.sushifox.ru"
+                  xmlns:tns="https://www.sushifox.ru">
+    <wsdl:types>
+        <schema elementFormDefault="qualified" targetNamespace="https://www.sushifox.ru"
+                xmlns="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="get_by_order">
+                <xs:all>
+                    <xs:element name="order" type="tns:OrderID"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="get_by_order_periodResponse">
+                <xs:all>
+                    <xs:element name="retval" type="tns:OrderStatusArray"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="Error">
+                <xs:all>
+                    <xs:element name="code" nillable="true" type="xs:string"/>
+                    <xs:element name="category" nillable="true" type="xs:string"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="get_by_payment_period">
+                <xs:all>
+                    <xs:element name="shop_id" type="xs:int"/>
+                    <xs:element name="start" type="xs:dateTime"/>
+                    <xs:element name="stop" type="xs:dateTime"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="Amount">
+                <xs:all>
+                    <xs:element name="amount" nillable="true" type="xs:float"/>
+                    <xs:element name="currency" nillable="true" type="xs:string"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="Payment">
+                <xs:all>
+                    <xs:element name="salepoint" nillable="true" type="xs:string"/>
+                    <xs:element name="id" nillable="true" type="xs:string"/>
+                    <xs:element name="date" nillable="true" type="xs:dateTime"/>
+                    <xs:element name="clearing" nillable="true" type="xs:string"/>
+                    <xs:element name="authcode" nillable="true" type="xs:string"/>
+                    <xs:element name="type" nillable="true" type="xs:string"/>
+                    <xs:element name="amount" nillable="true" type="tns:Amount"/>
+                    <xs:element name="authorg" nillable="true" type="xs:string"/>
+                    <xs:element name="doc" nillable="true" type="tns:Document"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="OrderID">
+                <xs:all>
+                    <xs:element name="shop_id" nillable="true" type="xs:int"/>
+                    <xs:element name="number" nillable="true" type="xs:string"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:element name="Amount" type="tns:Amount"/>
+            <xs:element name="Payment" type="tns:Payment"/>
+            <xs:element name="get_by_order_period" type="tns:get_by_order_period"/>
+            <xs:element name="Document" type="tns:Document"/>
+            <xs:complexType name="get_by_order_period">
+                <xs:all>
+                    <xs:element name="shop_id" type="xs:int"/>
+                    <xs:element name="start" type="xs:dateTime"/>
+                    <xs:element name="stop" type="xs:dateTime"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:element name="get_by_payment_periodResponse" type="tns:get_by_payment_periodResponse"/>
+            <xs:element name="Error" type="tns:Error"/>
+            <xs:complexType name="OrderStatus">
+                <xs:all>
+                    <xs:element name="payments" nillable="true" type="tns:PaymentArray"/>
+                    <xs:element name="error" nillable="true" type="tns:Error"/>
+                    <xs:element name="status" nillable="true" type="xs:string"/>
+                    <xs:element name="shopref" nillable="true" type="xs:string"/>
+                    <xs:element name="order" nillable="true" type="tns:OrderID"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:element name="get_by_order_periodResponse" type="tns:get_by_order_periodResponse"/>
+            <xs:element name="get_by_orderResponse" type="tns:get_by_orderResponse"/>
+            <xs:complexType name="Document">
+                <xs:all>
+                    <xs:element name="exp_date" nillable="true" type="xs:dateTime"/>
+                    <xs:element name="token" nillable="true" type="xs:string"/>
+                    <xs:element name="code" nillable="true" type="xs:string"/>
+                    <xs:element name="holder" nillable="true" type="xs:string"/>
+                    <xs:element name="number" nillable="true" type="xs:string"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:element name="OrderID" type="tns:OrderID"/>
+            <xs:complexType name="get_by_orderResponse">
+                <xs:all>
+                    <xs:element name="retval" type="tns:OrderStatus"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:element name="PaymentArray" type="tns:PaymentArray"/>
+            <xs:element name="OrderStatusArray" type="tns:OrderStatusArray"/>
+            <xs:complexType name="OrderStatusArray">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="OrderStatus" type="tns:OrderStatus"/>
+                </sequence>
+            </xs:complexType>
+            <xs:element name="get_by_order" type="tns:get_by_order"/>
+            <xs:element name="OrderStatus" type="tns:OrderStatus"/>
+            <xs:element name="get_by_payment_period" type="tns:get_by_payment_period"/>
+            <xs:complexType name="get_by_payment_periodResponse">
+                <xs:all>
+                    <xs:element name="retval" type="tns:OrderStatusArray"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="PaymentArray">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Payment" type="tns:Payment"/>
+                </sequence>
+            </xs:complexType>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="get_by_order">
+        <wsdl:part element="tns:get_by_order" name="get_by_order"/>
+    </wsdl:message>
+    <wsdl:message name="get_by_orderResponse">
+        <wsdl:part element="tns:get_by_orderResponse" name="get_by_orderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get_by_order_period">
+        <wsdl:part element="tns:get_by_order_period" name="get_by_order_period"/>
+    </wsdl:message>
+    <wsdl:message name="get_by_order_periodResponse">
+        <wsdl:part element="tns:get_by_order_periodResponse" name="get_by_order_periodResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get_by_payment_period">
+        <wsdl:part element="tns:get_by_payment_period" name="get_by_payment_period"/>
+    </wsdl:message>
+    <wsdl:message name="get_by_payment_periodResponse">
+        <wsdl:part element="tns:get_by_payment_periodResponse" name="get_by_payment_periodResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="service">
+        <wsdl:operation name="get_by_order" parameterOrder="get_by_order">
+            <wsdl:documentation/>
+            <wsdl:input message="tns:get_by_order" name="get_by_order"/>
+            <wsdl:output message="tns:get_by_orderResponse" name="get_by_orderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get_by_order_period" parameterOrder="get_by_order_period">
+            <wsdl:documentation/>
+            <wsdl:input message="tns:get_by_order_period" name="get_by_order_period"/>
+            <wsdl:output message="tns:get_by_order_periodResponse" name="get_by_order_periodResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get_by_payment_period" parameterOrder="get_by_payment_period">
+            <wsdl:documentation/>
+            <wsdl:input message="tns:get_by_payment_period" name="get_by_payment_period"/>
+            <wsdl:output message="tns:get_by_payment_periodResponse" name="get_by_payment_periodResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <plnk:partnerLinkType name="service">
+        <plnk:role name="service">
+            <plnk:portType name="tns:service"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:binding name="service" type="tns:service">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="get_by_order">
+            <soap:operation soapAction="get_by_order" style="document"/>
+            <wsdl:input name="get_by_order">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get_by_orderResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get_by_order_period">
+            <soap:operation soapAction="get_by_order_period" style="document"/>
+            <wsdl:input name="get_by_order_period">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get_by_order_periodResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get_by_payment_period">
+            <soap:operation soapAction="get_by_payment_period" style="document"/>
+            <wsdl:input name="get_by_payment_period">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get_by_payment_periodResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="service">
+        <wsdl:port binding="tns:service" name="service">
+            <soap:address location="https://tws.egopay.ru/status/v2/wsdl"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

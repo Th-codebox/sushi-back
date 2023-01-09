@@ -1,0 +1,30 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "Офис на кропоткина",
+            "apartmentNumber": "54",
+            "icoName": "icoHome",
+            "city": "Санкт-петербург",
+            "street": "Александра невского",
+            "house": "10",
+            "entry": "2",
+            "latGeo": "59.9262406",
+            "letGeo": "30.3843396"
+        },
+        {
+            "id": 2,
+            "name": "Дом",
+            "apartmentNumber": "54",
+            "icoName": "icoHome",
+            "city": "Санкт-петербург",
+            "street": "Октябарьская набержная",
+            "house": "26",
+            "entry": "2",
+            "latGeo": "59.9089473",
+            "letGeo": "30.4335599"
+        }
+    ],
+    "meta": null
+}

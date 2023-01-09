@@ -1,0 +1,60 @@
+{
+    "code": 200,
+    "data": {
+        "id": 2,
+        "name": "Алёксей Семёнов",
+        "phone": "79777777777",
+        "email": "test@example.ru",
+        "status": 0,
+        "image": "https://example/photo.jpg",
+        "createdAt": "2021-01-14 12:28:09",
+        "updatedAt": "2021-01-14 12:28:09",
+        "role": {
+            "id": 1,
+            "name": "super admin",
+            "description": null,
+            "sortOrder": 0,
+            "status": 1,
+            "createdAt": "2021-01-14 09:37:31",
+            "updatedAt": "2021-01-14 09:37:31"
+        },
+        "filials": [
+            {
+                "id": 1,
+                "name": "filial 1",
+                "city": "city",
+                "address": "address",
+                "minOrderCost": 123,
+                "sortOrder": 0,
+                "status": 1,
+                "createdAt": "2021-01-14T09:37:31.000000Z",
+                "updatedAt": "2021-01-14T09:37:31.000000Z",
+                "settings": []
+            }
+        ],
+        "docs": [
+            {
+                "id": 1,
+                "name": "БИК",
+                "path": "/server/path/doc.doc",
+                "description": null,
+                "group": "банк.данные",
+                "sortOrder": 0,
+                "status": 1,
+                "createdAt": "2021-01-14T12:28:09.000000Z",
+                "updatedAt": "2021-01-14T12:28:09.000000Z"
+            },
+            {
+                "id": 2,
+                "name": "паспорт",
+                "path": "/server/path/pasport.doc",
+                "description": null,
+                "group": null,
+                "sortOrder": 0,
+                "status": 1,
+                "createdAt": "2021-01-14T12:28:09.000000Z",
+                "updatedAt": "2021-01-14T12:28:09.000000Z"
+            }
+        ]
+    }
+}

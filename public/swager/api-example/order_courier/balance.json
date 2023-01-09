@@ -1,0 +1,9 @@
+{
+    "code": 200,
+    "data": {
+        "cashBalance": -1059,
+        "cashOperations": 1,
+        "terminalBalance": 0,
+        "terminalOperations": 0
+    }
+}

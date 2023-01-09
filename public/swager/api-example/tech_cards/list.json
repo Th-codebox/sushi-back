@@ -1,0 +1,59 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "ролл филадельфия",
+            "weight": 500,
+            "proteins": 300,
+            "fats": 50,
+            "carbohydrates": 200,
+            "calories": 180,
+            "composition": "Рыба, рис, огурец",
+            "compositionForCook": "Рис и рыба и готовить",
+            "chefComment": "Смешай то то с тем то",
+            "cookingType": "baked",
+            "dishType": "roll",
+            "manufacturerType": "hot",
+            "termTime": 10,
+            "timeToCool": 180,
+            "cookingTime": 20,
+            "hasTerm": true,
+            "status": true,
+            "sortOrder": 1,
+            "createdAt": "2021-01-21 09:08:11",
+            "updatedAt": "2021-01-21 09:08:11"
+        },
+        {
+            "id": 2,
+            "name": "Пицца деревнеская",
+            "weight": 500,
+            "proteins": 300,
+            "fats": 50,
+            "carbohydrates": 200,
+            "calories": 180,
+            "composition": "Грибы, тесто, огурец",
+            "compositionForCook": "Катаем тесто, потом катаем коляску",
+            "chefComment": "Смешай то то с тем то",
+            "cookingType": "baked",
+            "dishType": "pizza",
+            "manufacturerType": "hot",
+            "termTime": 10,
+            "timeToCool": 180,
+            "cookingTime": 20,
+            "hasTerm": true,
+            "status": true,
+            "sortOrder": 1,
+            "createdAt": "2021-01-21 09:09:01",
+            "updatedAt": "2021-01-21 09:11:25"
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

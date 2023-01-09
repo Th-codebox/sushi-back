@@ -1,0 +1,306 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "fullName": 0,
+            "code": "1",
+            "courierCell": "01",
+            "deliveryPrice": 0,
+            "deliveryType": "",
+            "totalPrice": 0,
+            "paymentType": "",
+            "orderStatus": "completed",
+            "filial": {
+                "id": 1,
+                "name": "СушиФокс Калининский",
+                "city": "city",
+                "address": "address",
+                "minOrderCost": 500
+            },
+            "basket": {
+                "id": 1,
+                "deliveryPrice": 0,
+                "deliveryType": "",
+                "totalPrice": 300,
+                "paymentType": "",
+                "dateDelivery": "",
+                "timeDelivery": "",
+                "clientMoney": 0,
+                "toDatetime": false,
+                "persons": 0,
+                "comment": "",
+                "commentForCourier": "",
+                "items": [
+                    {
+                        "id": 1,
+                        "type": "usual",
+                        "comment": "",
+                        "free": false,
+                        "price": 300,
+                        "modificationMenuItem": null,
+                        "menuItem": {
+                            "id": 1,
+                            "name": "Тестовый продукт 1",
+                            "slug": "roll-test",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "h1": "h1",
+                            "metaTitle": "",
+                            "metaDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "price": 300,
+                            "type": "single",
+                            "oldPrice": 370,
+                            "bonusAdd": 20,
+                            "stickerType": "spicy",
+                            "stickerMarketing": "hit",
+                            "hasStop": false,
+                            "needPersonCount": false,
+                            "image": null,
+                            "composition": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "modifications": [
+                                {
+                                    "id": 1,
+                                    "modification_id": 1,
+                                    "actualPrice": 230,
+                                    "actualCharacteristicTechCard": {
+                                        "weight": 172,
+                                        "proteins": 9,
+                                        "fats": 17,
+                                        "carbohydrates": 96,
+                                        "calories": 117
+                                    },
+                                    "name": "Половинка ролла",
+                                    "action": "subtract",
+                                    "type": "select",
+                                    "nameOff": "целый",
+                                    "nameOn": "половинка",
+                                    "active": false
+                                }
+                            ],
+                            "technicalCard": {
+                                "weight": 345,
+                                "proteins": 19,
+                                "fats": 34,
+                                "carbohydrates": 193,
+                                "calories": 234
+                            },
+                            "bundleItems": []
+                        },
+                        "techCardForConstruct": null,
+                        "menuItemId": 1,
+                        "modificationMenuItemId": null,
+                        "subMenuItemId": null,
+                        "quantity": 1
+                    }
+                ],
+                "noCall": 0,
+                "showButtonNoCall": true,
+                "needPersonsCount": false,
+                "promoCode": null,
+                "cookingAndDeliveryTime": 20
+            },
+            "cookingAndDeliveryTimeInMinutes": 0.3333333333333333,
+            "createdAt": null
+        },
+        {
+            "fullName": 0,
+            "code": "1",
+            "courierCell": "0",
+            "deliveryPrice": 0,
+            "deliveryType": "",
+            "totalPrice": 0,
+            "paymentType": "",
+            "orderStatus": "inDelivery",
+            "filial": {
+                "id": 1,
+                "name": "СушиФокс Калининский",
+                "city": "city",
+                "address": "address",
+                "minOrderCost": 500
+            },
+            "basket": {
+                "id": 1,
+                "deliveryPrice": 0,
+                "deliveryType": "",
+                "totalPrice": 300,
+                "paymentType": "",
+                "dateDelivery": "",
+                "timeDelivery": "",
+                "clientMoney": 0,
+                "toDatetime": false,
+                "persons": 0,
+                "comment": "",
+                "commentForCourier": "",
+                "items": [
+                    {
+                        "id": 1,
+                        "type": "usual",
+                        "comment": "",
+                        "free": false,
+                        "price": 300,
+                        "modificationMenuItem": null,
+                        "menuItem": {
+                            "id": 1,
+                            "name": "Тестовый продукт 1",
+                            "slug": "roll-test",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "h1": "h1",
+                            "metaTitle": "",
+                            "metaDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "price": 300,
+                            "type": "single",
+                            "oldPrice": 370,
+                            "bonusAdd": 20,
+                            "stickerType": "spicy",
+                            "stickerMarketing": "hit",
+                            "hasStop": false,
+                            "needPersonCount": false,
+                            "image": null,
+                            "composition": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "modifications": [
+                                {
+                                    "id": 1,
+                                    "modification_id": 1,
+                                    "actualPrice": 230,
+                                    "actualCharacteristicTechCard": {
+                                        "weight": 172,
+                                        "proteins": 9,
+                                        "fats": 17,
+                                        "carbohydrates": 96,
+                                        "calories": 117
+                                    },
+                                    "name": "Половинка ролла",
+                                    "action": "subtract",
+                                    "type": "select",
+                                    "nameOff": "целый",
+                                    "nameOn": "половинка",
+                                    "active": false
+                                }
+                            ],
+                            "technicalCard": {
+                                "weight": 345,
+                                "proteins": 19,
+                                "fats": 34,
+                                "carbohydrates": 193,
+                                "calories": 234
+                            },
+                            "bundleItems": []
+                        },
+                        "techCardForConstruct": null,
+                        "menuItemId": 1,
+                        "modificationMenuItemId": null,
+                        "subMenuItemId": null,
+                        "quantity": 1
+                    }
+                ],
+                "noCall": 0,
+                "showButtonNoCall": true,
+                "needPersonsCount": false,
+                "promoCode": null,
+                "cookingAndDeliveryTime": 20
+            },
+            "cookingAndDeliveryTimeInMinutes": 0.3333333333333333,
+            "createdAt": null
+        },
+        {
+            "fullName": 0,
+            "code": "1",
+            "courierCell": "0",
+            "deliveryPrice": 0,
+            "deliveryType": "",
+            "totalPrice": 0,
+            "paymentType": "",
+            "orderStatus": "inDelivery",
+            "filial": {
+                "id": 1,
+                "name": "СушиФокс Калининский",
+                "city": "city",
+                "address": "address",
+                "minOrderCost": 500
+            },
+            "basket": {
+                "id": 1,
+                "deliveryPrice": 0,
+                "deliveryType": "",
+                "totalPrice": 300,
+                "paymentType": "",
+                "dateDelivery": "",
+                "timeDelivery": "",
+                "clientMoney": 0,
+                "toDatetime": false,
+                "persons": 0,
+                "comment": "",
+                "commentForCourier": "",
+                "items": [
+                    {
+                        "id": 1,
+                        "type": "usual",
+                        "comment": "",
+                        "free": false,
+                        "price": 300,
+                        "modificationMenuItem": null,
+                        "menuItem": {
+                            "id": 1,
+                            "name": "Тестовый продукт 1",
+                            "slug": "roll-test",
+                            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "h1": "h1",
+                            "metaTitle": "",
+                            "metaDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "price": 300,
+                            "type": "single",
+                            "oldPrice": 370,
+                            "bonusAdd": 20,
+                            "stickerType": "spicy",
+                            "stickerMarketing": "hit",
+                            "hasStop": false,
+                            "needPersonCount": false,
+                            "image": null,
+                            "composition": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+                            "modifications": [
+                                {
+                                    "id": 1,
+                                    "modification_id": 1,
+                                    "actualPrice": 230,
+                                    "actualCharacteristicTechCard": {
+                                        "weight": 172,
+                                        "proteins": 9,
+                                        "fats": 17,
+                                        "carbohydrates": 96,
+                                        "calories": 117
+                                    },
+                                    "name": "Половинка ролла",
+                                    "action": "subtract",
+                                    "type": "select",
+                                    "nameOff": "целый",
+                                    "nameOn": "половинка",
+                                    "active": false
+                                }
+                            ],
+                            "technicalCard": {
+                                "weight": 345,
+                                "proteins": 19,
+                                "fats": 34,
+                                "carbohydrates": 193,
+                                "calories": 234
+                            },
+                            "bundleItems": []
+                        },
+                        "techCardForConstruct": null,
+                        "menuItemId": 1,
+                        "modificationMenuItemId": null,
+                        "subMenuItemId": null,
+                        "quantity": 1
+                    }
+                ],
+                "noCall": 0,
+                "showButtonNoCall": true,
+                "needPersonsCount": false,
+                "promoCode": null,
+                "cookingAndDeliveryTime": 20
+            },
+            "cookingAndDeliveryTimeInMinutes": 0.3333333333333333,
+            "createdAt": null
+        }
+    ],
+    "meta": null
+}

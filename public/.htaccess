@@ -1,0 +1,33 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    #RewriteCond %{REQUEST_URI} ^/socket.io [NC]
+     #   RewriteCond %{QUERY_STRING} transport=websocket [NC]
+      #  RewriteRule /(.*) ws://sushifox.local:6001/$1 [P,L]
+
+        #ProxyPass        /socket.io http://sushifox.local:6001/socket.io
+        #ProxyPassReverse /socket.io http://sushifox.local:6001/socket.io
+        <IfModule mod_headers.c>
+        Header unset Access-Control-Allow-Origin
+        Header always set Access-Control-Allow-Origin "*"
+        Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, DELETE"
+        Header always set Access-Control-Allow-Headers "Origin,Content-Type,Accept,Authorization,X-Requested-With"
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

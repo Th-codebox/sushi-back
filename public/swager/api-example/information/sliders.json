@@ -1,0 +1,33 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "Суши",
+            "link": "https://test.ru",
+            "target": "home",
+            "desktopImage": null,
+            "mobileImage": null
+        },
+        {
+            "id": 2,
+            "name": "слайдер 2",
+            "link": "https://test.ru",
+            "target": "category",
+            "desktopImage": null,
+            "mobileImage": null
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "sort": [],
+            "search": [],
+            "conditions": [],
+            "page": "1",
+            "withoutRelation": false
+        }
+    }
+}

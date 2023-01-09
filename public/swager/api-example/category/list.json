@@ -1,0 +1,207 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "Суши",
+            "slug": "susi",
+            "description": "Очень вкусные суши для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": "http//example/ico.png",
+            "status": true,
+            "sortOrder": 1,
+            "updatedAt": "2021-01-18 21:31:25",
+            "createdAt": "2021-01-18 21:31:25",
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Суши",
+                    "slug": "susi",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": {
+                        "amount": "500",
+                        "currency": "RUB",
+                        "formatted": "5,00 ₽"
+                    },
+                    "oldPrice": {
+                        "amount": "400",
+                        "currency": "RUB",
+                        "formatted": "4,00 ₽"
+                    },
+                    "bonusAdd": 100,
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "image": "/example/image.jpg",
+                    "composition": "Рис, лосось, кунжут",
+                    "status": true,
+                    "hasStop": true,
+                    "sortOrder": 1,
+                    "createdAt": "2021-01-18 21:40:09",
+                    "updatedAt": "2021-01-18 21:52:21",
+                    "modifications": [
+                        {
+                            "id": 1,
+                            "priceRate": 0,
+                            "priceAdd": 0,
+                            "status": false,
+                            "sortOrder": 0,
+                            "updatedAt": "2021-01-18 21:40:09",
+                            "createdAt": "2021-01-18 21:40:09",
+                            "modification": {
+                                "id": 1,
+                                "name": "Сырный бортик",
+                                "action": "add",
+                                "type": "single",
+                                "priceRate": 1.5,
+                                "priceAdd": 100,
+                                "nameOff": "ржаная корка",
+                                "nameOn": "c сырным бортиком",
+                                "status": true,
+                                "sortOrder": 1,
+                                "updatedAt": "2021-01-18 21:31:07",
+                                "createdAt": "2021-01-18 21:31:07"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "priceRate": 0.5,
+                            "priceAdd": 168,
+                            "status": false,
+                            "sortOrder": 0,
+                            "updatedAt": "2021-01-18 21:40:09",
+                            "createdAt": "2021-01-18 21:40:09",
+                            "modification": null
+                        }
+                    ]
+                }
+            ],
+            "collections": [
+                {
+                    "id": 1,
+                    "name": "Супер комбо",
+                    "subTitle": "Дополнительный заголвок",
+                    "image": null,
+                    "slug": "super-kombo",
+                    "ico": "/example/image.jpg",
+                    "type": "desktop",
+                    "target": "home",
+                    "description": "Супе комбо для всей семьи!",
+                    "status": true,
+                    "sortOrder": 1,
+                    "createdAt": "2021-01-18 21:44:32",
+                    "updatedAt": "2021-01-18 21:50:33"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "пиццы",
+            "slug": "piccy",
+            "description": "Очень вкусные суши для вас!",
+            "h1": "h1",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "ico": "http//example/ico.png",
+            "status": true,
+            "sortOrder": 1,
+            "updatedAt": "2021-01-18 21:42:19",
+            "createdAt": "2021-01-18 21:42:19",
+            "menuItems": [
+                {
+                    "id": 4,
+                    "name": "Пицца3",
+                    "slug": "picca3",
+                    "description": "Очень вкусные суши для вас!",
+                    "h1": "h1",
+                    "metaTitle": "metaTitle",
+                    "metaDescription": "metaDescription",
+                    "price": {
+                        "amount": "500",
+                        "currency": "RUB",
+                        "formatted": "5,00 ₽"
+                    },
+                    "oldPrice": {
+                        "amount": "400",
+                        "currency": "RUB",
+                        "formatted": "4,00 ₽"
+                    },
+                    "bonusAdd": 100,
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "image": "/example/image.jpg",
+                    "composition": "",
+                    "status": true,
+                    "hasStop": true,
+                    "sortOrder": 1,
+                    "createdAt": "2021-01-18 21:42:36",
+                    "updatedAt": "2021-01-18 21:42:36",
+                    "modifications": [
+                        {
+                            "id": 3,
+                            "priceRate": 0,
+                            "priceAdd": 0,
+                            "status": false,
+                            "sortOrder": 0,
+                            "updatedAt": "2021-01-18 21:42:36",
+                            "createdAt": "2021-01-18 21:42:36",
+                            "modification": {
+                                "id": 1,
+                                "name": "Сырный бортик",
+                                "action": "add",
+                                "type": "single",
+                                "priceRate": 1.5,
+                                "priceAdd": 100,
+                                "nameOff": "ржаная корка",
+                                "nameOn": "c сырным бортиком",
+                                "status": true,
+                                "sortOrder": 1,
+                                "updatedAt": "2021-01-18 21:31:07",
+                                "createdAt": "2021-01-18 21:31:07"
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "priceRate": 0,
+                            "priceAdd": 0,
+                            "status": false,
+                            "sortOrder": 0,
+                            "updatedAt": "2021-01-18 21:42:36",
+                            "createdAt": "2021-01-18 21:42:36",
+                            "modification": null
+                        }
+                    ]
+                }
+            ],
+            "collections": [
+                {
+                    "id": 2,
+                    "name": "Выбор клиента",
+                    "subTitle": "Дополнительный заголвок",
+                    "image": null,
+                    "slug": "vybor-klienta",
+                    "ico": "/example/image.jpg",
+                    "type": "desktop",
+                    "target": "home",
+                    "description": "Супе комбо для всей семьи!",
+                    "status": true,
+                    "sortOrder": 1,
+                    "createdAt": "2021-01-18 21:47:42",
+                    "updatedAt": "2021-01-18 21:50:38"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

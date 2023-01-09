@@ -1,0 +1,33 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "name": "Алёксей Семёнов",
+            "phone": "79226777458",
+            "email": "test@example.ru",
+            "status": 1,
+            "confirmPhone": 0,
+            "lastVisitAt": null,
+            "updatedAt": "2021-01-17 12:18:23",
+            "createdAt": "2021-01-17 12:18:23"
+        },
+        {
+            "name": "Алёксей Соломин",
+            "phone": "79226777460",
+            "email": null,
+            "status": 1,
+            "confirmPhone": 0,
+            "lastVisitAt": null,
+            "updatedAt": "2021-01-17 12:18:41",
+            "createdAt": "2021-01-17 12:18:41"
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

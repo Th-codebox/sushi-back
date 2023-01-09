@@ -1,0 +1,63 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "Офис на кропоткина",
+            "apartmentNumber": "54",
+            "icoName": "54",
+            "city": "Санкт-петербург",
+            "street": "Александра невского",
+            "house": "10",
+            "entry": "2",
+            "latGeo": "59.9262406",
+            "letGeo": "30.3843396",
+            "updatedAt": "2021-02-01 22:57:10",
+            "createdAt": "2021-02-01 22:51:37",
+            "client": {
+                "id": 1,
+                "name": "Алёксей Семёнов",
+                "phone": "79228109900",
+                "email": "test@example.ru",
+                "status": 1,
+                "confirmPhone": 0,
+                "lastVisitAt": null,
+                "updatedAt": "2021-02-01 22:50:26",
+                "createdAt": "2021-02-01 22:50:26"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Офис на кропоткина",
+            "apartmentNumber": "54",
+            "icoName": "54",
+            "city": "Санкт-петербург",
+            "street": "Достоевского",
+            "house": "10",
+            "entry": "2",
+            "latGeo": "59.926011",
+            "letGeo": "30.3502135",
+            "updatedAt": "2021-02-01 22:58:53",
+            "createdAt": "2021-02-01 22:58:53",
+            "client": {
+                "id": 1,
+                "name": "Алёксей Семёнов",
+                "phone": "79228109900",
+                "email": "test@example.ru",
+                "status": 1,
+                "confirmPhone": 0,
+                "lastVisitAt": null,
+                "updatedAt": "2021-02-01 22:50:26",
+                "createdAt": "2021-02-01 22:50:26"
+            }
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

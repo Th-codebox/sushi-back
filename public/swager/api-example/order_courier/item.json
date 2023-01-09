@@ -1,0 +1,20 @@
+{
+    "code": 200,
+    "data": {
+        "id": 2,
+        "orderNumber": 2,
+        "date": 1610409600,
+        "price": 396,
+        "address": "084313, Мурманская область, город Балашиха, пл. Ломоносова, 41",
+        "latitude": "-111.632309",
+        "longitude": "-54.141205",
+        "comment": "Non nihil et odio incidunt praesentium natus neque. Fugiat officiis sint quo laudantium delectus.",
+        "clientName": "Давид Евгеньевич Архипова",
+        "phone": "(812) 472-47-64",
+        "deadLine": 1610928000,
+        "startAt": 1611187200,
+        "status": "inDelivery",
+        "paymentType": "terminal",
+        "clientMoney": "1418"
+    }
+}

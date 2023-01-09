@@ -1,0 +1,179 @@
+{
+    "code": 200,
+    "data": {
+        "id": 11,
+        "name": "Супер сет",
+        "slug": "super-set",
+        "description": "Очень вкусные суши для вас!",
+        "h1": "h1",
+        "metaTitle": "metaTitle",
+        "metaDescription": "metaDescription",
+        "price": {
+            "amount": "50000",
+            "currency": "RUB",
+            "formatted": "500,00 ₽"
+        },
+        "oldPrice": {
+            "amount": "40000",
+            "currency": "RUB",
+            "formatted": "400,00 ₽"
+        },
+        "bonusAdd": 100,
+        "type": "bundle",
+        "stickerType": "spicy",
+        "stickerMarketing": "hit",
+        "image": null,
+        "composition": "Рис, лосось, кунжут",
+        "status": true,
+        "hasStop": true,
+        "sortOrder": 1,
+        "createdAt": "2021-02-02 21:56:56",
+        "updatedAt": "2021-02-02 22:18:09",
+        "collections": [],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Роллы",
+                "slug": "rolls",
+                "description": "",
+                "h1": "h1",
+                "metaTitle": "",
+                "metaDescription": "",
+                "status": true,
+                "sortOrder": 1,
+                "ico": null,
+                "updatedAt": "2021-02-02 08:02:37",
+                "createdAt": "2021-02-02 08:02:37"
+            },
+            {
+                "id": 2,
+                "name": "Суши",
+                "slug": "sushi",
+                "description": "",
+                "h1": "h1",
+                "metaTitle": "",
+                "metaDescription": "",
+                "status": true,
+                "sortOrder": 2,
+                "ico": null,
+                "updatedAt": "2021-02-02 08:02:55",
+                "createdAt": "2021-02-02 08:02:55"
+            },
+            {
+                "id": 5,
+                "name": "Комбо",
+                "slug": "combo",
+                "description": "",
+                "h1": "h1",
+                "metaTitle": "",
+                "metaDescription": "",
+                "status": true,
+                "sortOrder": 5,
+                "ico": null,
+                "updatedAt": "2021-02-02 08:04:56",
+                "createdAt": "2021-02-02 08:04:56"
+            }
+        ],
+        "modifications": [],
+        "technicalCard": {
+            "id": 0,
+            "name": "",
+            "weight": 550,
+            "proteins": 500,
+            "fats": 500,
+            "carbohydrates": 500,
+            "calories": 500,
+            "composition": "",
+            "compositionForCook": "",
+            "chefComment": "",
+            "cookingType": "",
+            "dishType": "",
+            "manufacturerType": "",
+            "termTime": 0,
+            "timeToCool": 0,
+            "cookingTime": 0,
+            "hasTerm": false,
+            "status": false,
+            "sortOrder": 0,
+            "createdAt": null,
+            "updatedAt": null
+        },
+        "bundleItems": [
+            {
+                "id": 17,
+                "menuItem": {
+                    "id": 1,
+                    "name": "Тестовый продукт 1",
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "image": null,
+                    "createdAt": "2021-02-02 08:39:40",
+                    "updatedAt": "2021-02-02 08:39:40"
+                },
+                "modificationMenuItem": {
+                    "id": 1,
+                    "name": "Половинка ролла",
+                    "nameOff": "целый",
+                    "nameOn": "половинка"
+                }
+            },
+            {
+                "id": 18,
+                "menuItem": {
+                    "id": 1,
+                    "name": "Тестовый продукт 1",
+                    "stickerType": "spicy",
+                    "stickerMarketing": "hit",
+                    "image": null,
+                    "createdAt": "2021-02-02 08:39:40",
+                    "updatedAt": "2021-02-02 08:39:40"
+                },
+                "modificationMenuItem": null
+            },
+            {
+                "id": 19,
+                "menuItem": {
+                    "id": 2,
+                    "name": "Тестовый продукт 2",
+                    "stickerType": "vegetarian",
+                    "stickerMarketing": "percent",
+                    "image": null,
+                    "createdAt": "2021-02-02 08:40:45",
+                    "updatedAt": "2021-02-02 08:40:45"
+                },
+                "modificationMenuItem": null
+            },
+            {
+                "id": 20,
+                "menuItem": {
+                    "id": 4,
+                    "name": "Тестовый продукт 4",
+                    "stickerType": "child",
+                    "stickerMarketing": "personalDiscount",
+                    "image": null,
+                    "createdAt": "2021-02-02 08:51:22",
+                    "updatedAt": "2021-02-02 08:51:22"
+                },
+                "modificationMenuItem": {
+                    "id": 2,
+                    "name": "Сырный бортик",
+                    "nameOff": "ржанная корка",
+                    "nameOn": "сырный бортик"
+                }
+            },
+            {
+                "id": 21,
+                "menuItem": {
+                    "id": 3,
+                    "name": "Тестовый продукт 3",
+                    "stickerType": "spicy",
+                    "stickerMarketing": "new",
+                    "image": null,
+                    "createdAt": "2021-02-02 08:43:19",
+                    "updatedAt": "2021-02-02 08:43:19"
+                },
+                "modificationMenuItem": null
+            }
+        ]
+    }
+}

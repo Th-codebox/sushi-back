@@ -1,0 +1,8 @@
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "promoC34ode": [
+            "promoC34ode - недопустимое значение, выберите одно из слудющих значений:promoCode,persons,comment,address"
+        ]
+    }
+}

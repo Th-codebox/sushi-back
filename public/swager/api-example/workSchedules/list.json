@@ -1,0 +1,81 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "date": 1612742400,
+            "begin": "12:00:00",
+            "end": "19:00:00",
+            "shiftTime": "offDay",
+            "user": {
+                "id": 1,
+                "name": "admin",
+                "phone": "79228109900",
+                "image": null,
+                "email": "mail@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        },
+        {
+            "id": 2,
+            "date": 1612742400,
+            "begin": "15:00:00",
+            "end": "19:00:00",
+            "shiftTime": "offDay",
+            "user": {
+                "id": 2,
+                "name": "тестовый курьер",
+                "phone": "79878734280",
+                "image": null,
+                "email": "courier@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        },
+        {
+            "id": 3,
+            "date": 1612828800,
+            "begin": "15:00:00",
+            "end": "19:00:00",
+            "shiftTime": "offDay",
+            "user": {
+                "id": 2,
+                "name": "тестовый курьер",
+                "phone": "79878734280",
+                "image": null,
+                "email": "courier@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        },
+        {
+            "id": 4,
+            "date": 1612915200,
+            "begin": "15:00:00",
+            "end": "19:00:00",
+            "shiftTime": "offDay",
+            "user": {
+                "id": 2,
+                "name": "тестовый курьер",
+                "phone": "79878734280",
+                "image": null,
+                "email": "courier@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        }
+    ],
+    "meta": {
+        "total": 4,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

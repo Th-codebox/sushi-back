@@ -1,0 +1,97 @@
+{
+    "code": 200,
+    "data": {
+        "proceed": {
+            "proceedTotalToday": 4767,
+            "onlineProceedToday": 1130,
+            "terminalProceedToday": 2525,
+            "cashProceedToday": 1112
+        },
+        "total": {
+            "terminalTotalToday": 700,
+            "cashTotalToday": 500,
+            "checksTotalToday": 1
+        },
+        "count": {
+            "cashCountToday": 1,
+            "onlineCountToday": 1,
+            "terminalCountToday": 1
+        },
+        "collection": {
+            "collectionChecksSubtract": 0,
+            "collectionTerminalSubtract": 0,
+            "collectionCashSubtract": 0,
+            "collectionCashAdd": 0
+        },
+        "begin": {
+            "beginCash": 0,
+            "beginTerminal": 0,
+            "beginChecks": 0
+        },
+        "openAt": "2021-03-04",
+        "debtorList": [
+            {
+                "id": 10,
+                "name": "Супер Курьер  1",
+                "terminalBalance": 0,
+                "checksCount": 0,
+                "cashBalance": -612,
+                "totalBalance": -612
+            }
+        ],
+        "correctTransactionsList": [
+            {
+                "id": 15,
+                "name": "1 чек",
+                "price": 700,
+                "transitType": "courier_transit",
+                "paymentType": "terminal",
+                "operationType": "send",
+                "status": "completed",
+                "time": "22:28:56",
+                "senderName": "Супер Курьер  1",
+                "balanceAfter": 0,
+                "cashBalance": 0
+            },
+            {
+                "id": 14,
+                "name": "сдал",
+                "price": 500,
+                "transitType": "courier_transit",
+                "paymentType": "cash",
+                "operationType": "send",
+                "status": "completed",
+                "time": "22:28:07",
+                "senderName": "Супер Курьер  1",
+                "balanceAfter": -612,
+                "cashBalance": -612
+            },
+            {
+                "id": 10,
+                "name": "№ 1000",
+                "price": 700,
+                "transitType": "courier_transit",
+                "paymentType": "terminal",
+                "operationType": "topUpOrder",
+                "status": "completed",
+                "time": "22:23:26",
+                "senderName": "Супер Курьер  1",
+                "balanceAfter": 0,
+                "cashBalance": 0
+            },
+            {
+                "id": 7,
+                "name": "№ 1001",
+                "price": 1112,
+                "transitType": "courier_transit",
+                "paymentType": "cash",
+                "operationType": "topUpOrder",
+                "status": "completed",
+                "time": "21:56:11",
+                "senderName": "Супер Курьер  1",
+                "balanceAfter": -860,
+                "cashBalance": -860
+            }
+        ]
+    }
+}

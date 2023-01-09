@@ -1,0 +1,19 @@
+{
+    "code": 200,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvdGVzdC5zdXNoaWZveC5ydVwvY291cmllclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTA1NTQ2ODIsImV4cCI6MTYxMDU1ODI4MiwibmJmIjoxNjEwNTU0NjgyLCJqdGkiOiIwVzJqM1dRMVhWeDRJeEZBIiwic3ViIjoxLCJwcnYiOiIxM2YwNGE5MmQ4ZTUwYTFhMmQ0Y2Y4ZTJmZDAwN2VmNjRhYzM2NWIzIn0.D2G4u_3l7qnQIszMkDfxYBoXITUM5Ldz1PAU78vxyQk",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "data": {
+        "id": 1,
+        "name": "courier",
+        "phone": "79228109900",
+        "email": "mail@example.com",
+        "photo": "https://mint-food.ru/assets/img/about-company/dir-hover-2.png",
+        "todayDeliveries": 0,
+        "todayLateness": 0,
+        "allDeliveries": 14,
+        "allLateness": 14,
+        "allDays": 2,
+        "workedShifts": 80
+    }
+}

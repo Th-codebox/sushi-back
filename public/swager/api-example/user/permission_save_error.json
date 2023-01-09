@@ -1,0 +1,4 @@
+{
+    "message": "Fail permission save: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`test`.`custom_user_permissions`, CONSTRAINT `cup_permission_id_fk` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) (SQL: insert into `custom_user_permissions` (`user_id`, `permission_id`, `filial_id`) values (9, 2222, 1)) -  Line : 671 -  Line : 80",
+    "data": null
+}

@@ -1,0 +1,13 @@
+{
+    "code": 200,
+    "data": {
+        "name": "Алёксей Семёнов",
+        "phone": "79226777458",
+        "email": "test@example.ru",
+        "status": 1,
+        "confirmPhone": 0,
+        "lastVisitAt": null,
+        "updatedAt": "2021-01-17 12:18:23",
+        "createdAt": "2021-01-17 12:18:23"
+    }
+}

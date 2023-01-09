@@ -1,0 +1,42 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 20,
+            "name": "на сдачу",
+            "price": 500,
+            "paymentType": "cash",
+            "operationType": "receive",
+            "status": "completed",
+            "quantityChecks": 0,
+            "balanceBefore": 0,
+            "balanceAfter": -500,
+            "date": 1615420800
+        },
+        {
+            "id": 22,
+            "name": "сдал",
+            "price": 500,
+            "paymentType": "cash",
+            "operationType": "send",
+            "status": "completed",
+            "quantityChecks": 1,
+            "balanceBefore": -2000,
+            "balanceAfter": -1500,
+            "date": 1615420800
+        },
+        {
+            "id": 23,
+            "name": "№ 1001",
+            "price": 497700,
+            "paymentType": "cash",
+            "operationType": "topUpOrder",
+            "status": "wait",
+            "quantityChecks": 0,
+            "balanceBefore": -1500,
+            "balanceAfter": -1500,
+            "date": 1615420800
+        }
+    ],
+    "meta": null
+}

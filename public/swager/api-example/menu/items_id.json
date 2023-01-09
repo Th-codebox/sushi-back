@@ -1,0 +1,75 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Суши калифорния",
+        "slug": "susi-kaliforniya",
+        "description": "Очень вкусные суши для вас!",
+        "h1": "h1",
+        "metaTitle": "metaTitle",
+        "metaDescription": "metaDescription",
+        "price": 300,
+        "type": "single",
+        "oldPrice": 400,
+        "bonusAdd": 100,
+        "stickerType": "",
+        "stickerMarketing": "",
+        "hasStop": true,
+        "needPersonCount": true,
+        "image": null,
+        "composition": "Рис, лосось, кунжут",
+        "modifications": [
+            {
+                "id": 1,
+                "modification_id": 2,
+                "actualPrice": 235,
+                "actualCharacteristicTechCard": {
+                    "weight": 250,
+                    "proteins": 150,
+                    "fats": 25,
+                    "carbohydrates": 100,
+                    "calories": 90
+                },
+                "name": "Половинка ролла",
+                "action": "subtract",
+                "type": "single",
+                "nameOff": "",
+                "nameOn": "половинка",
+                "active": false
+            }
+        ],
+        "collections": [
+            {
+                "id": 1,
+                "name": "Супер комбо",
+                "subTitle": "Дополнительный заголвок",
+                "image": null,
+                "slug": "slug",
+                "ico": "/example/image.jpg",
+                "type": "desktop",
+                "target": "home",
+                "description": "Супе комбо для всей семьи!"
+            }
+        ],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Суши",
+                "slug": "susi",
+                "description": "Очень вкусные суши для вас!",
+                "h1": "h1",
+                "metaTitle": "metaTitle",
+                "metaDescription": "metaDescription",
+                "ico": null
+            }
+        ],
+        "technicalCard": {
+            "weight": 500,
+            "proteins": 300,
+            "fats": 50,
+            "carbohydrates": 200,
+            "calories": 180
+        },
+        "bundleItems": []
+    }
+}

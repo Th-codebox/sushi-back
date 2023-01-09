@@ -1,0 +1,84 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 28,
+            "date": 1611100800,
+            "price": 190,
+            "address": "008832, Сахалинская область, город Подольск, пер. Гагарина, 68",
+            "deadLine": 1609804800,
+            "completed": true,
+            "canceled": false,
+            "paymentType": "cash",
+            "deliveryTime": -259200,
+            "isLate": true,
+            "diffTime": -604800
+        },
+        {
+            "id": 48,
+            "date": 1609804800,
+            "price": 793,
+            "address": "072839, Оренбургская область, город Дорохово, наб. Гагарина, 74",
+            "deadLine": 1611100800,
+            "completed": true,
+            "canceled": false,
+            "paymentType": "paid",
+            "deliveryTime": -1209600,
+            "isLate": false,
+            "diffTime": 1209600
+        },
+        {
+            "id": 50,
+            "date": 1610841600,
+            "price": 1670,
+            "address": "626757, Амурская область, город Серебряные Пруды, спуск Бухарестская, 17",
+            "deadLine": 1609804800,
+            "completed": true,
+            "canceled": false,
+            "paymentType": "paid",
+            "deliveryTime": 518400,
+            "isLate": true,
+            "diffTime": -1123200
+        },
+        {
+            "id": 52,
+            "date": 1609891200,
+            "price": 2387,
+            "address": "926192, Костромская область, город Балашиха, ул. Гоголя, 82",
+            "deadLine": 1610755200,
+            "completed": false,
+            "canceled": true,
+            "paymentType": "paid",
+            "deliveryTime": 518400,
+            "isLate": false,
+            "diffTime": 259200
+        },
+        {
+            "id": 54,
+            "date": 1610668800,
+            "price": 908,
+            "address": "929420, Магаданская область, город Шаховская, ул. Чехова, 30",
+            "deadLine": 1611187200,
+            "completed": true,
+            "canceled": false,
+            "paymentType": "paid",
+            "deliveryTime": 259200,
+            "isLate": false,
+            "diffTime": 518400
+        },
+        {
+            "id": 58,
+            "date": 1610755200,
+            "price": 1932,
+            "address": "565510, Смоленская область, город Подольск, въезд Домодедовская, 46",
+            "deadLine": 1610928000,
+            "completed": false,
+            "canceled": true,
+            "paymentType": "terminal",
+            "deliveryTime": 172800,
+            "isLate": false,
+            "diffTime": 1036800
+        }
+    ],
+    "meta": null
+}

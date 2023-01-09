@@ -1,0 +1,49 @@
+{
+    "code": 200,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NybVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTA2Mjc0MTMsImV4cCI6MTYxMDYzMTAxMywibmJmIjoxNjEwNjI3NDEzLCJqdGkiOiJEakdETmEyS0hybkI0dU9SIiwic3ViIjoxLCJwcnYiOiI3Y2M5MzZkYjZjOTZkM2Q5MDQ2Nzk4OTNkNDM3OGZjYmM3NmUyMTFmIn0.ocAO2rPgN0tRGh99FeljTPWqR0WPHc7kk7Xi9orTqWw",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "data": {
+        "id": 1,
+        "name": "admin",
+        "phone": "79228109900",
+        "email": "mail@example.com",
+        "status": 1,
+        "createdAt": "2021-01-14 09:37:31",
+        "updatedAt": "2021-01-14 09:37:31",
+        "role": {
+            "id": 1,
+            "name": "super admin",
+            "description": null,
+            "sortOrder": 0,
+            "status": 1,
+            "createdAt": "2021-01-14 09:37:31",
+            "updatedAt": "2021-01-14 09:37:31"
+        },
+        "filials": [],
+        "docs": [
+            {
+                "id": 3,
+                "name": "БИК",
+                "path": "/server/path/doc.doc",
+                "description": null,
+                "group": "банк.данные",
+                "sortOrder": 0,
+                "status": 1,
+                "createdAt": "2021-01-14T12:28:45.000000Z",
+                "updatedAt": "2021-01-14T12:28:45.000000Z"
+            },
+            {
+                "id": 4,
+                "name": "паспорт",
+                "path": "/server/path/pasport.doc",
+                "description": null,
+                "group": null,
+                "sortOrder": 0,
+                "status": 1,
+                "createdAt": "2021-01-14T12:28:45.000000Z",
+                "updatedAt": "2021-01-14T12:28:45.000000Z"
+            }
+        ]
+    }
+}

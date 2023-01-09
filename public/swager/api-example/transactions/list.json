@@ -1,0 +1,93 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "2 чека",
+            "price": 150,
+            "paymentType": "terminal",
+            "operationType": "send",
+            "status": "completed",
+            "quantityChecks": 2,
+            "date": 1612828800,
+            "courier": {
+                "id": 2,
+                "name": "тестовый курьер",
+                "phone": "79878734280",
+                "image": null,
+                "email": "courier@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        },
+        {
+            "id": 2,
+            "name": "2 чека",
+            "price": 500,
+            "paymentType": "terminal",
+            "operationType": "send",
+            "status": "cancel",
+            "quantityChecks": 2,
+            "date": 1612828800,
+            "courier": {
+                "id": 1,
+                "name": "admin",
+                "phone": "79228109900",
+                "image": null,
+                "email": "mail@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        },
+        {
+            "id": 3,
+            "name": "2 чека",
+            "price": 150,
+            "paymentType": "terminal",
+            "operationType": "send",
+            "status": "completed",
+            "quantityChecks": 2,
+            "date": 1612828800,
+            "courier": {
+                "id": 2,
+                "name": "тестовый курьер",
+                "phone": "79878734280",
+                "image": null,
+                "email": "courier@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        },
+        {
+            "id": 4,
+            "name": "сдал",
+            "price": 150,
+            "paymentType": "cash",
+            "operationType": "send",
+            "status": "completed",
+            "quantityChecks": 2,
+            "date": 1612828800,
+            "courier": {
+                "id": 2,
+                "name": "тестовый курьер",
+                "phone": "79878734280",
+                "image": null,
+                "email": "courier@example.com",
+                "status": 1,
+                "createdAt": "2021-02-09 10:11:22",
+                "updatedAt": "2021-02-09 10:11:22"
+            }
+        }
+    ],
+    "meta": {
+        "total": 4,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

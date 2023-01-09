@@ -1,0 +1,43 @@
+{
+    "code": 200,
+    "data": {
+        "id": 5,
+        "name": "Филиал на Томилинской",
+        "city": "Санкт-петербург",
+        "address": "ул.Маршакова д.21",
+        "minOrderCost": 0,
+        "sortOrder": 1,
+        "status": 1,
+        "createdAt": "2021-01-14T08:19:33.000000Z",
+        "updatedAt": "2021-01-14T08:19:33.000000Z",
+        "settings": [
+            {
+                "id": 7,
+                "code" : "test1",
+                "group": "test",
+                "key": "testKey",
+                "value": "testValue",
+                "json": false
+            },
+            {
+                "id": 8,
+                "code" : "test2",
+                "group": "test",
+                "key": "test2Key",
+                "value": "test2Value",
+                "json": false
+            },
+            {
+                "id": 9,
+                "code" : "test3",
+                "group": "test2",
+                "key": "testJson",
+                "value": {
+                    "test_1": "ok",
+                    "test_2": "false"
+                },
+                "json": true
+            }
+        ]
+    }
+}

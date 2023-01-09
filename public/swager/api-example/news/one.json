@@ -1,0 +1,35 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Суши",
+        "slug": "susi",
+        "description": "Очень вкусные суши для вас!",
+        "descriptionBeforePromoCode": "Очень вкусные суши для вас!",
+        "descriptionAfterPromoCode": "Очень вкусные суши для вас!",
+        "h1": "",
+        "metaTitle": "metaTitle",
+        "metaDescription": "metaDescription",
+        "status": true,
+        "sortOrder": 1,
+        "image": null,
+        "date": "2022-10-10",
+        "updatedAt": "2021-02-25 19:24:20",
+        "createdAt": "2021-02-25 19:24:20",
+        "promoCode": {
+            "id": 1,
+            "name": "С днём рождения!",
+            "description": null,
+            "code": "BIRTHDAY",
+            "salePercent": 30,
+            "saleSubtraction": 0,
+            "time_on": null,
+            "time_end": null,
+            "type": "personal",
+            "action": "birthDay",
+            "onlyFirstOrder": false,
+            "status": true,
+            "sort_order": 0
+        }
+    }
+}

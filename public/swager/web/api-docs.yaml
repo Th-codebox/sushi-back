@@ -1,0 +1,2187 @@
+openapi: 3.0.0
+info:
+  title: 'Суши Фокс REST API для сайта'
+  description: 'Суши Фокс REST API для сайта'
+  contact:
+    email: dev@sushifox.ru
+  version: 0.0.1
+servers:
+  - url: 'http://api.sushifox.ru/web'
+    description: 'API sushi fox server'
+  - url: 'http://localhost/web'
+    description: 'local server'
+  - url: 'http://sushifox.local/web'
+    description: 'local server 2'
+
+
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+security:
+  - bearerAuth: []
+
+
+paths:
+  /auth/sendCode:
+    post:
+      tags:
+        - 'Авторизация клиента'
+      summary: 'Отправляет код для потверждения авторизации'
+      description: 'Возвращает статус отправки кода'
+      operationId: sendCode
+      requestBody:
+        description: 'Пример запроса'
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - phone
+              properties:
+                phone:
+                  type: string
+                  example: '79228109900'
+              type: object
+      responses:
+        '200':
+          description: 'Отправка успешна прошла'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_client/send_success.json'
+        '422':
+          description: 'Не правильный формат телефона'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        '403':
+          description: 'Много запросов! повторите попытку через 10 секунд(ы)'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_client/code_many_send.json'
+  /auth/login:
+    post:
+      tags:
+        - 'Авторизация клиента'
+      summary: Авторизует пользователя по номеру телефона
+      description: 'Возвращает токен пользователя'
+      operationId: login
+      requestBody:
+        description: 'Пример запроса'
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - phone
+                - password
+              properties:
+                phone:
+                  type: string
+                  example: '79228109900'
+                password:
+                  type: string
+                  example: '777'
+                utms:
+                  type: string
+                  example: { "utm_source": "test_utm_source","utm_medium": "test_utm_medium","utm_content": "test_utm_content","utm_term": "utm_term_medium","utm_campaign": "test_utm_campaign","traffic_type": "test_utm_campaign"}
+                deviceInfo:
+                  type: string
+                  example: { "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36","deviceId": "J600F","device": "Mobile Phone / SM J600F","os": "android version 8.0.0","pushToken": "34g$rdwer34W4ase45sa$$sdfw346-"}
+
+              type: object
+      responses:
+        200:
+          description: 'Успешный вход'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/login_success.json'
+        422:
+          description: 'Неавторизованный, неправильные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+        402:
+          description: 'Код актуален 360 секунд, отправьте новый код и подтвердите еще раз'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_client/code_timeout.json'
+        403:
+          description: 'Пользователь не активирован'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_client/not_active.json'
+  /auth/me:
+    post:
+      tags:
+        - 'Авторизация клиента'
+      summary: 'Возвращает информацию о пользователе'
+      description: ''
+      operationId: me
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_client/me.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /auth/refresh:
+    post:
+      tags:
+        - 'Авторизация клиента'
+      summary: 'Возвращает обновленный токен доступа'
+      description: 'Обновление токена доступа'
+      operationId: tokenRefresh
+      responses:
+        200:
+          description: 'Токен успешно обновлён'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/login_success.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /auth/logout:
+    post:
+      tags:
+        - 'Авторизация клиента'
+      summary: 'Выход пользователя из учётной записи'
+      description: 'Возвращает статус выхода из системы'
+      operationId: logout
+
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                deviceInfo:
+                  type: string
+                  example: { "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36","deviceId": "J600F","device": "Mobile Phone / SM J600F","os": "android version 8.0.0","pushToken": "34g$rdwer34W4ase45sa$$sdfw346-"}
+              type: object
+      responses:
+        200:
+          description: 'Выход успешен'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/logout.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /common/uploadImage:
+    post:
+      tags:
+        - 'Загрузка картинок'
+      summary: 'Загрузить картинку на сервер'
+      description: 'Загрущает картинку и возвращает массив с путём до файла и названием картинки'
+      operationId: imageUpload
+      requestBody:
+        description: 'Пример запроса'
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - image
+              properties:
+                image:
+                  type: string
+                path:
+                  type: string
+                  example: /collections/1
+              type: object
+      responses:
+        200:
+          description: 'Успешная загрузка'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/upload/success.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+  /menu/upSellingItems:
+    get:
+      tags:
+        - Каталог
+      summary: 'Эллементы допродаж'
+      description: 'Эллементы допродаж'
+      operationId: upSellingItems
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о блюде'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/menu/items_id.json'
+        404:
+          description: 'Неправильный Id, блюдо не найдено'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/access_denied.json'
+  /menu/items:
+    get:
+      tags:
+        - Каталог
+      summary: 'Получить детальную информацию о блюде с категориями, модификациями и коллекциями'
+      description: 'Возвращает информацию о блюде'
+      operationId: getMenuItem
+      parameters:
+        -
+          name: 'search'
+          in: query
+          description: 'Поле для поиска'
+          required: false
+          schema:
+            type: string
+        -
+          name: 'text'
+          in: query
+          description: 'Текст поиска'
+          required: false
+          schema:
+            type: string
+        -
+          name: 'relations'
+          in: query
+          description: 'связи, что бы не тянуть лишнего, допустим categories'
+          required: false
+          schema:
+            type: string
+        -
+          name: 'sort'
+          in: query
+          description: 'поле для сортировки name/sort_order или любое другое из имеющихся'
+          required: false
+          schema:
+            type: string
+        -
+          name: 'order'
+          in: query
+          description: 'asc\desc , по умолчанию desc'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о блюде'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/menu/items_id.json'
+        404:
+          description: 'Неправильный Id, блюдо не найдено'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/access_denied.json'
+  /menu/items/{param}:
+    get:
+      tags:
+        - Каталог
+      summary: 'Получить детальную информацию о блюде с категориями, модификациями и коллекциями'
+      description: 'Возвращает информацию о блюде'
+      operationId: getMenuItemId
+      parameters:
+        -
+          name: 'param'
+          in: path
+          description: 'Внутрений индификатор блюда'
+          required: true
+          schema:
+            type: string
+
+        -
+          name: 'type'
+          in: query
+          description: 'Тип индификатора для поиска slug\id'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о блюде'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/menu/items_id.json'
+        404:
+          description: 'Неправильный Id, блюдо не найдено'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/access_denied.json'
+
+  /menu/collections/{type}/{target}:
+    get:
+      tags:
+        - Каталог
+      summary: 'Получить детальную информацию о коллекциях с блюдами, модификациями и категориями'
+      description: 'Возвращает информацию о коллекциях'
+      operationId: getCollectionByTypeAndTarget
+      parameters:
+        -
+          name: 'type'
+          in: path
+          description: 'Тип колекций (mobile, desktop)'
+          required: true
+          schema:
+            type: string
+        -
+          name: 'target'
+          in: path
+          description: 'Назначение коллекции. Например, для главной или категории'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о коллекциях'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/collections/collections_type_target.json'
+        404:
+          description: 'Неправильный Id, блюдо не найдено'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/access_denied.json'
+
+  /menu/categories/{param}:
+    get:
+      tags:
+        - Каталог
+      summary: 'Получить категорию с блюдами и модификациями блюд'
+      description: 'Возвращает информацию о категории'
+      operationId: getCategoryItems
+      parameters:
+        -
+          name: 'param'
+          in: path
+          description: 'Внутрений индификатор категории'
+          required: true
+          schema:
+            type: string
+
+        - name: 'type'
+          in: query
+          description: 'Тип индификатора для поиска slug\id'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о категории'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/categories/categories_id.json'
+        404:
+          description: 'Неправильный Id, категория не найдена'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+
+  /menu/categories:
+    get:
+      tags:
+        - Каталог
+      summary: 'Возвращает информацию о категориях'
+      description: 'Получить категории с блюдами и модификациями блюд'
+      operationId: getCategories
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/categories/categories.json'
+
+
+  /common/getSuggestAddress:
+    get:
+      tags:
+        - 'Подсказки'
+      summary: 'Получить подсказку по адресу'
+      description: 'Передается адрес гет параметром, возврашается результаты подсказок'
+      operationId: getSuggestAddress
+      parameters:
+        - name: address
+          in: query
+          description: 'Часть адреса для подсказки'
+          required: true
+          schema:
+            type: string
+        - name: field
+          in: query
+          description: 'Поле для подсказки'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/suggest/address.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /common/checkAddressIsDeliveryByString:
+    get:
+      tags:
+        - 'Подсказки'
+      summary: 'Проверка доступности адреса для доставки'
+      description: 'Передается адрес гет параметром, возврашается результаты подсказок'
+      operationId: checkAddressIsDeliveryByString
+      parameters:
+        - name: address
+          in: query
+          description: 'Адрес для подсказки'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/suggest/address.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /information/sliders:
+    get:
+      tags:
+        - 'Информация'
+      summary: 'Список слайдеров'
+      description: 'Возвращается список актуальных полигонов'
+      operationId: sliderList
+      parameters:
+        -
+          name: 'target'
+          in: query
+          description: 'Целевая страница слайдера'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/information/sliders.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+  /information/polygons:
+    get:
+      tags:
+        - 'Информация'
+      summary: 'Список полигонов'
+      description: 'Возвращается список актуальных полигонов'
+      operationId: polygonsList
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/information/polygons.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+  /information/promotions:
+    get:
+      tags:
+        - 'Информация'
+      summary: 'Список полигонов'
+      description: 'Возвращается список актуальных полигонов'
+      operationId: promotionsList
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/information/promotions.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /information/promotions/{param}:
+    get:
+      tags:
+        - 'Информация'
+      summary: 'Получить промоакцию'
+      description: 'Возвращает информацию о промоакцию'
+      operationId: getPromotion
+      parameters:
+        -
+          name: 'param'
+          in: path
+          description: 'Внутрений индификатор промоакцию'
+          required: true
+          schema:
+            type: string
+
+        -
+          name: 'type'
+          in: query
+          description: 'Тип индификатора для поиска slug\id'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о категории'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/information/promotion_id.json'
+        404:
+          description: 'Неправильный Id,  новость не найдена'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+  /information/news:
+    get:
+      tags:
+        - 'Информация'
+      summary: 'Список новостей'
+      description: 'Возвращается список новостей'
+      operationId: newsList
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/information/news.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+  /information/news/{param}:
+    get:
+      tags:
+        - 'Информация'
+      summary: 'Получить новость'
+      description: 'Возвращает информацию о новости'
+      operationId: getNew
+      parameters:
+        -
+          name: 'param'
+          in: path
+          description: 'Внутрений индификатор новости'
+          required: true
+          schema:
+            type: string
+        -
+          name: 'type'
+          in: query
+          description: 'Тип индификатора для поиска slug\id'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о категории'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/information/news_id.json'
+        404:
+          description: 'Неправильный Id,  новость не найдена'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+  /basket:
+    get:
+      tags:
+        - 'Корзина'
+      summary: 'Считает и возращает данные корзины'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: getBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Обновить данные корзины'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: updatetBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                comment:
+                  type: string
+                  example: 'Положите побольше салфеток'
+                commentForCourier:
+                  type: string
+                  example: 'Домофон - 5433'
+                persons:
+                  type: int
+                  example: '3'
+                clientAddressId:
+                  type: int
+                  example: '3'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /basket/changeCourier:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Изменить способ доставки на курьера, так же  адрес и время доставки'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: changeCourierBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                clientAddressId:
+                  type: integer
+                  example: '10'
+                dateDelivery:
+                  type: string
+                  example: '10.12.2020'
+                timeDelivery:
+                  type: string
+                  example: '15:00 - 17:00'
+                toDatetime:
+                  type: bool
+                  example: true
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/changePickup:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Изменить способ доставки на самовывоз, обязательный параметр в теле filialId'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: changePickUpBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                filialId:
+                  type: integer
+                  example: 1
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/changePayment:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Изменить тип оплаты и сумму размена'
+      description: |
+        Изменить способ оплаты у корзины в работе,где ***paymentType*** строка с одиним из значений:
+        <br><br>-cash (наличные);
+        <br>-terminal (оплата по терминаналу);
+        <br>-online (онлайн оплата);
+        <br><br><br><br>Поля c возможным значением Null:
+        <br><br>***clientMoney***
+      operationId: changePaymentBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                paymentType:
+                  type: string
+                  example: 'cash'
+                clientMoney:
+                  type: integer
+                  example: '1000'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/addPromoCode:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Изменить или добавить промокод'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: addPromocodeBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                promoCode:
+                  type: string
+                  example: 'NAVSE10'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/item:
+    post:
+      tags:
+        - 'Корзина'
+      summary:  'Добавить товар в корзину.'
+      description: |
+       'Добавить товар в корзину
+                  ,где
+                  ***type*** строка с одиним из значений, по умолчанию usual,если не посылать поле, если ***type*** = constuct, должно присутвовать и быть не пустым поле subMenuItemId:
+                  <br><br>-construct (конструктор);
+                  <br>-usual (обычный, по умл.);
+      operationId: putItemInBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                menuItemId:
+                  type: int
+                  example: 1
+                type:
+                  type: string
+                  example: usual
+                subMenuItemId:
+                  type: int
+                  example: 2
+                modificationId:
+                  type: integer
+                  example: 1
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        404:
+          description: 'Товар не найден'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+    delete:
+      tags:
+        - 'Корзина'
+      summary: 'Удалить эллемент из корзины по 3 параметрам, обязательное значение menuItemId'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: deleteItemInBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                menuItemId:
+                  type: int
+                  example: 1
+                subMenuItemId:
+                  type: int
+                  example: 2
+                modificationId:
+                  type: integer
+                  example: 1
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        404:
+          description: 'Товар не найден'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/addItems:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Добавить товары в корзину'
+      description: |
+        'Добавить товары в корзину ,где ***type*** строка с одиним из значений:
+                   <br><br>-construct (наличные);
+                   <br>-usual (оплата по терминаналу);
+      operationId: addItems
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                persons:
+                  type: integer
+                  example: 3
+                items:
+                  type: string
+                  example:  [ { "menuItemId": "1","type": "construct","subMenuItemId": "2","quantity" : "5"},{"menuItemId": "2","quantity" : "1", "modificationId": "2"} ]
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        404:
+          description: 'Товар не найден'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/items/:
+    delete:
+      tags:
+        - 'Корзина'
+      summary: 'Удалить все товары из корзины'
+      description: 'Возвращает актуальное состояние корзины'
+      operationId: deleteItemsInBasket
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/updateCallNotification:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Отказаться от звонка администратора'
+      description: 'Отписать корзину от звонка для потверждения, доступно после первого заказа'
+      operationId: updateCallNotification
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                noCall:
+                  type: bool
+                  example: 'true'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/repeatOrder/{orderId}:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Оформить заказ'
+      description: 'Оформить заказ, возвращает результат и ссылку на оплату'
+      operationId: repeatOrder
+      parameters:
+        - name: orderId
+          in: path
+          description: 'ID заказа'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /basket/createOrder:
+    patch:
+      tags:
+        - 'Корзина'
+      summary: 'Оформить заказ'
+      description: 'Оформить заказ, возвращает результат и ссылку на оплату'
+      operationId: createOrderFromBasket
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/invalid_data.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /basket/items/{hash}/editModification:
+    post:
+      tags:
+        - 'Корзина'
+      summary:  'Изменить модификатор у группы эллементов корзины'
+      description:  'Изменить модификатор у группы эллементов корзины'
+      operationId: editModification
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+        - name: hash
+          in: path
+          description: 'Хэш эллементов корзины'
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                modificationId:
+                  type: integer
+                  example: 1
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        404:
+          description: 'Товар не найден'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /basket/items/{hash}/changeQuantity:
+    post:
+      tags:
+        - 'Корзина'
+      summary:  'Изменить колличество у группы эллементов корзины'
+      description: 'Изменить колличество у группы эллементов корзины , где пост параметр type - up/down'
+      operationId: changeQuantity
+
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+        - name: hash
+          in: path
+          description: 'Хэш эллементов корзины'
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                type:
+                  type: string
+                  example: up
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        404:
+          description: 'Товар не найден'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /basket/items/{hash}/delete:
+    delete:
+      tags:
+        - 'Корзина'
+      summary:  'Удалить группу эллементов корзины'
+      description: 'Удалить группу эллементов корзины'
+      operationId: hashDelete
+
+      parameters:
+        - name: uuid
+          in: query
+          description: 'uuid корзины'
+          required: false
+          schema:
+            type: string
+        - name: hash
+          in: path
+          description: 'Хэш эллементов корзины'
+          required: true
+          schema:
+            type: string
+
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/basket/basket_data.json'
+        404:
+          description: 'Товар не найден'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        500:
+          description: 'Внутрение ошибка сервера'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+
+
+  /orders/thankPage/{id}:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Получить результат оплаты заказа'
+      description: 'Получить результат оплаты заказа'
+      operationId: thankPage
+      parameters:
+        - name: id
+          in: path
+          description: 'ID заказ'
+          required: false
+          schema:
+            type: int
+      responses:
+        200:
+          description: 'Успешная  оплата'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/orders.json
+        201:
+          description: 'Ожидает оплаты'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/orders.json
+        401:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/orders.json
+        422:
+          description: 'Оплата прошла неуспешно'
+  /orders:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Получить заказы'
+      description: 'Получить заказы'
+      operationId: getOrders
+      parameters:
+        - name: limit
+          in: query
+          description: 'задать лимит записей'
+          required: false
+          schema:
+            type: int
+        - name: offset
+          in: query
+          description: 'задать точку отсчёта записей'
+          required: false
+          schema:
+            type: int
+        - name: page
+          in: query
+          description: 'задать страницу'
+          required: false
+          schema:
+            type: int
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/orders.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /orders/{id}:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Получить заказ по id'
+      description: 'Получить заказ по id'
+      operationId: getOrder
+      parameters:
+        - name: id
+          in: path
+          description: 'Внутрений индификатор заказа'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/one.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /orders/getActive:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Список активных заказов'
+      description: 'Возвращается список активных заказов'
+      operationId: activeOrders
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/active.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /orders/getHistory:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'История заказов'
+      description: 'Возвращается историю заказов'
+      operationId: orderHistory
+      responses:
+        200:
+          description: 'Успешны  результат'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/orders/orders.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        422:
+          description: 'Невалидный файл/Не указан путь'
+
+  /client/profile:
+    get:
+      tags:
+        - Профиль
+      summary: 'Получить информацию о клиенте'
+      description: 'Возращает информацию о клиенте с адресами'
+      operationId: getClientProfile
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о клиенте'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/profile.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+    patch:
+      tags:
+        - Профиль
+      summary: 'Обновить профиль клиента'
+      description: 'Обнолвяет профиль клиента и возвращает обновлённую информацию'
+      operationId: editClientProfile
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: 'Иванонов Иван Иванович'
+                email:
+                  type: string
+                  example: 'mail@example.com'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/profile.json'
+        422:
+          description: 'Неверные данные'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /client/address:
+    get:
+      tags:
+        - Адреса клиента
+      summary: 'Получить все адреса клиента'
+      description: 'Получить все адреса текущего клиента'
+      operationId: getClientAddresse
+      responses:
+        200:
+          description: 'Успешный ответ от сервера с информацией о адресах'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/addresses.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+    post:
+      tags:
+        - Адреса клиента
+      summary: 'Добавить новый адрес клиента'
+      description: 'Проверяет правильность адреса, сохроняет адрес, вместе с вычисленными кординатами'
+      operationId: addAddress
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                city:
+                  type: string
+                  example: 'Санкт-петербург'
+                street:
+                  type: string
+                  example: 'Кропоткина'
+                house:
+                  type: string
+                  example: '10'
+                entry:
+                  type: string
+                  example: '2'
+                apartmentNumber:
+                  type: string
+                  example: '54'
+                name:
+                  type: string
+                  example: 'Офис на кропоткина'
+                icoName:
+                  type: string
+                  example: 'icoHome'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/add_address.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /client/addPromoCode:
+    post:
+      tags:
+        - Промокоды
+      summary: 'Добавить новый промокод клиенту'
+      description: 'Проверяет правильность промокода, сохроняет промокод'
+      operationId: addPromoCode
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                promoCode:
+                  type: string
+                  example: 'VSE-300'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/add_promocode.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /client/address/{id}:
+    patch:
+      tags:
+        - Адреса клиента
+      summary: 'Обновить  адрес клиента'
+      description: 'Проверяет правильность адреса, обновить адрес, вместе с вычисленными кординатами'
+      operationId: editAddress
+      parameters:
+        -
+          name: 'id'
+          in: path
+          description: 'Внутрений индификатор'
+          required: true
+          schema:
+            type: number
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                city:
+                  type: string
+                  example: 'Санкт-петербург'
+                street:
+                  type: string
+                  example: 'Кропоткина'
+                house:
+                  type: string
+                  example: '10'
+                entry:
+                  type: string
+                  example: '2'
+                apartmentNumber:
+                  type: string
+                  example: '54'
+                icoName:
+                  type: string
+                  example: 'icoHome'
+                name:
+                  type: string
+                  example: 'Офис на кропоткина'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/add_address.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+    delete:
+      tags:
+        - Адреса клиента
+      summary: 'Удалить адрес клиента'
+      description: 'Удалить адрес клиента'
+      operationId: deleteAddress
+      parameters:
+        -
+          name: 'id'
+          in: path
+          description: 'Внутрений индификатор'
+          required: true
+          schema:
+            type: number
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/client/delete_address_success.json'
+        404:
+          description: 'Несуществующий адрес'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/not_found.json'
+
+  /mail/vacancy:
+    post:
+      tags:
+        - Обратная связь
+      summary: 'Отправить вакансию'
+      description: 'Отправить вакансию'
+      operationId: sendvacancy
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                role:
+                  type: string
+                  example: 'Администратор'
+                name:
+                  type: string
+                  example: 'Сывичев Иван Палыч'
+                phone:
+                  type: string
+                  example: '79228109900'
+                email:
+                  type: string
+                  example: 'test@mail.ru'
+                birthDay:
+                  type: string
+                  example: '10-10-1990'
+                address:
+                  type: string
+                  example: 'с.петербург пр.гаагрина 4'
+                pcLevel:
+                  type: bool
+                  example: true
+                dateBegin:
+                  type: string
+                  example: '10-10-2020'
+                comment:
+                  type: string
+                  example: 'Доп сведенья'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/true.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /mail/cooperation:
+    post:
+      tags:
+        - Обратная связь
+      summary: 'Отправить заявку на сотрудничество'
+      description: 'Отправить заявку на сотрудничество'
+      operationId: cooperation
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                organisationName:
+                  type: string
+                  example: 'Администратор'
+                name:
+                  type: string
+                  example: 'Сывичев Иван Палыч'
+                phone:
+                  type: string
+                  example: '79228109900'
+                inn:
+                  type: string
+                  example: '123123123123'
+                text:
+                  type: string
+                  example: '10-10-1990'
+                doc:
+                  type: string
+                  example: 'с.петербург пр.гаагрина 4'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/true.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /mail/feedback:
+    post:
+      tags:
+        - Обратная связь
+      summary: 'Отправить письмо менеджерам, обратная связь'
+      description: 'Отправить письмо менеджерам, обратная связь'
+      operationId: sendfeedback
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: 'Сывичев Иван Палыч'
+                phone:
+                  type: string
+                  example: '79228109900'
+                comment:
+                  type: string
+                  example: 'Доп сведенья'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/true.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+  /mail/review:
+    post:
+      tags:
+        - Обратная связь
+      summary: 'Отправить отзыв'
+      description: 'Отправить отзыв'
+      operationId: sendreview
+      requestBody:
+        description: 'Пример запроса'
+        required: false
+        content:
+          application/json:
+            schema:
+              properties:
+                tasteRating:
+                  type: int
+                  example: 10
+                tasteComment:
+                  type: string
+                  example: 'Очень вкусно!!!'
+                deliveryRating:
+                  type: int
+                  example: 10
+                deliveryComment:
+                  type: string
+                  example: 'супер быстрый курьер'
+              type: object
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/true.json'
+        422:
+          description: 'Неверные данные / Такой адрес уже существует'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/invalid_request.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+
+
+
+tags:
+  -
+    name: 'Авторизация клиента'
+  -
+    name: Каталог
+  -
+    name: Корзина
+  -
+    name: Профиль
+  -
+    name: Адреса клиента

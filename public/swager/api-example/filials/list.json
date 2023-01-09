@@ -1,0 +1,145 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "filial 1",
+            "city": "city",
+            "address": "address",
+            "minOrderCost": 123,
+            "sortOrder": 0,
+            "status": 1,
+            "createdAt": "2021-01-14T07:12:30.000000Z",
+            "updatedAt": "2021-01-14T07:12:30.000000Z",
+            "settings": []
+        },
+        {
+            "id": 2,
+            "name": "Филиал на Маршакова",
+            "city": "Санкт-петербург",
+            "address": "ул.Маршакова д.21",
+            "minOrderCost": 0,
+            "sortOrder": 1,
+            "status": 1,
+            "createdAt": "2021-01-14T08:09:49.000000Z",
+            "updatedAt": "2021-01-14T08:09:49.000000Z",
+            "settings": [
+                {
+                    "id": 1,
+                    "code" : "test",
+                    "group": "test2",
+                    "key": "testKey",
+                    "value": "testValue",
+                    "json": false
+                },
+                {
+                    "id": 2,
+                    "code" : "test2",
+                    "group": "test3",
+                    "key": "test2Key",
+                    "value": "test2Value",
+                    "json": false
+                },
+                {
+                    "id": 3,
+                    "code" : "test3",
+                    "group": "main",
+                    "key": "testJson",
+                    "value": {
+                        "test_1": "ok",
+                        "test_2": "false"
+                    },
+                    "json": true
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Филиал на  test",
+            "city": "Санкт-петербург",
+            "address": "ул.Маршакова д.21",
+            "minOrderCost": 0,
+            "sortOrder": 1,
+            "status": 1,
+            "createdAt": "2021-01-14T08:10:07.000000Z",
+            "updatedAt": "2021-01-14T08:11:08.000000Z",
+            "settings": [
+                {
+                    "id": 4,
+                    "code" : "test",
+                    "group": "main",
+                    "key": "testKey",
+                    "value": "testValue",
+                    "json": false
+                },
+                {
+                    "id": 5,
+                    "code" : "test1",
+                    "group": "main",
+                    "key": "test2Key",
+                    "value": "test2Value",
+                    "json": false
+                },
+                {
+                    "id": 6,
+                    "code" : "test2",
+                    "group": "main",
+                    "key": "testJson",
+                    "value": {
+                        "test_1": "ok",
+                        "test_2": "false"
+                    },
+                    "json": true
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Филиал на Томилинской",
+            "city": "Санкт-петербург",
+            "address": "ул.Маршакова д.21",
+            "minOrderCost": 0,
+            "sortOrder": 1,
+            "status": 1,
+            "createdAt": "2021-01-14T08:19:33.000000Z",
+            "updatedAt": "2021-01-14T08:19:33.000000Z",
+            "settings": [
+                {
+                    "id": 7,
+                    "code" : "test",
+                    "group": "test",
+                    "key": "testKey",
+                    "value": "testValue",
+                    "json": false
+                },
+                {
+                    "id": 8,
+                    "code" : "test1",
+                    "group": "test",
+                    "key": "test2Key",
+                    "value": "test2Value",
+                    "json": false
+                },
+                {
+                    "id": 9,
+                    "code" : "test2",
+                    "group": "test2",
+                    "key": "testJson",
+                    "value": {
+                        "test_1": "ok",
+                        "test_2": "false"
+                    },
+                    "json": true
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "total": 4,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

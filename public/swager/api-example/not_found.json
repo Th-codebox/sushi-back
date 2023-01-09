@@ -1,0 +1,6 @@
+{
+    "code": 404,
+    "message": "Not found!",
+    "data": null,
+    "exception": "Illuminate\\Auth\\AuthenticationException"
+}

@@ -1,0 +1,100 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "name": "Промо акция 1",
+            "slug": "susi",
+            "description": "",
+            "h1": "",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "status": true,
+            "sortOrder": 1,
+            "image": null,
+            "updatedAt": "2021-02-22 11:05:05",
+            "createdAt": "2021-02-22 11:05:05",
+            "promoCode": {
+                "id": 1,
+                "name": "С днём рождения!",
+                "description": null,
+                "code": "BIRTHDAY",
+                "salePercent": 30,
+                "saleSubtraction": 0,
+                "time_on": null,
+                "time_end": null,
+                "type": "personal",
+                "action": "birthDay",
+                "onlyFirstOrder": false,
+                "status": true,
+                "sort_order": 0
+            }
+        },
+        {
+            "id": 2,
+            "name": "Промо акция 3",
+            "slug": "promo-akciya-3",
+            "description": "",
+            "h1": "",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "status": true,
+            "sortOrder": 1,
+            "image": null,
+            "updatedAt": "2021-02-22 11:05:19",
+            "createdAt": "2021-02-22 11:05:19",
+            "promoCode": {
+                "id": 2,
+                "name": "Скидка за друга",
+                "description": null,
+                "code": "FRIEND_SALE",
+                "salePercent": 20,
+                "saleSubtraction": 0,
+                "time_on": null,
+                "time_end": null,
+                "type": "personal",
+                "action": "friendPercent",
+                "onlyFirstOrder": false,
+                "status": true,
+                "sort_order": 0
+            }
+        },
+        {
+            "id": 3,
+            "name": "Промо акция 4",
+            "slug": "promo-akciya-4",
+            "description": "",
+            "h1": "",
+            "metaTitle": "metaTitle",
+            "metaDescription": "metaDescription",
+            "status": true,
+            "sortOrder": 1,
+            "image": null,
+            "updatedAt": "2021-02-22 11:05:33",
+            "createdAt": "2021-02-22 11:05:33",
+            "promoCode": {
+                "id": 3,
+                "name": "Удвоение заказа",
+                "description": null,
+                "code": "DOUBLE",
+                "salePercent": 0,
+                "saleSubtraction": 0,
+                "time_on": null,
+                "time_end": null,
+                "type": "all",
+                "action": "doubling",
+                "onlyFirstOrder": false,
+                "status": true,
+                "sort_order": 0
+            }
+        }
+    ],
+    "meta": {
+        "total": 3,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

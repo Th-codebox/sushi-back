@@ -1,0 +1,144 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Повар",
+            "description": "Повар холодного цеха",
+            "sortOrder": 1,
+            "status": 1,
+            "createdAt": "2021-01-08 10:27:33",
+            "updatedAt": "2021-01-08 10:27:33",
+            "permissions": [
+                {
+                    "id": 1,
+                    "name": "Просмотр пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "index",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 2,
+                    "name": "Просмотр пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "show",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 3,
+                    "name": "Создание пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "store",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 4,
+                    "name": "Изменение пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "update",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 5,
+                    "name": "Удаление пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "destroy",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "all"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Повар 2",
+            "description": "Повар холодного цеха",
+            "sortOrder": 1,
+            "status": 1,
+            "createdAt": "2021-01-08 10:29:27",
+            "updatedAt": "2021-01-08 10:29:27",
+            "permissions": [
+                {
+                    "id": 1,
+                    "name": "Просмотр пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "index",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 2,
+                    "name": "Просмотр пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "show",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 3,
+                    "name": "Создание пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "store",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "filials"
+                },
+                {
+                    "id": 4,
+                    "name": "Изменение пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "update",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "schedules"
+                },
+                {
+                    "id": 5,
+                    "name": "Удаление пользвателей",
+                    "namespace": "App/Http/Controllers/CRM/System",
+                    "controller": "UserController",
+                    "method": "destroy",
+                    "group": "main",
+                    "sort_order": 0,
+                    "updatedAt": "2021-01-08 10:17:16",
+                    "type": "all"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

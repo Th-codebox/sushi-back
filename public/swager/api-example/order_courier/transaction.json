@@ -1,0 +1,15 @@
+{
+    "code": 200,
+    "data": {
+        "id": 23,
+        "name": "№ 1001",
+        "price": 497700,
+        "paymentType": "cash",
+        "operationType": "topUpOrder",
+        "status": "wait",
+        "quantityChecks": 0,
+        "balanceBefore": -1500,
+        "balanceAfter": -1500,
+        "date": 1615420800
+    }
+}

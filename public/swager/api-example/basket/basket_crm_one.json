@@ -1,0 +1,36 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "promoCode": "VSE 10",
+        "deliveryPrice": {
+            "amount": "0",
+            "currency": "RUB",
+            "formatted": "0,00 ₽"
+        },
+        "deliveryType": "delivery",
+        "totalPrice": {
+            "amount": "0",
+            "currency": "RUB",
+            "formatted": "0,00 ₽"
+        },
+        "paymentType": "terminal",
+        "basketSource": "crm",
+        "clientSource": "yandex.ru",
+        "dateDelivery": "2021-02-15",
+        "timeDelivery": "22-00",
+        "commentForCourier": "Домофон не работает",
+        "clientMoney": {
+            "amount": "2000",
+            "currency": "RUB",
+            "formatted": "20,00 ₽"
+        },
+        "persons": 4,
+        "comment": "Правый ролл слева без сыра",
+        "noCall": false,
+        "clientAddress": null,
+        "items": [],
+        "createdAt": "2021-01-28 11:38:37",
+        "updatedAt": "2021-01-28 11:38:37"
+    }
+}

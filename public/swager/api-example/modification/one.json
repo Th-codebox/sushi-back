@@ -1,0 +1,45 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "Сырный бортик",
+        "description": "Очень сырно!",
+        "action": "add",
+        "type": "single",
+        "priceRate": 1,
+        "priceAdd": {
+            "amount": "100",
+            "currency": "RUB",
+            "formatted": "1,00 ₽"
+        },
+        "nameOff": "ржаная корка",
+        "nameOn": "c сырным бортиком",
+        "status": true,
+        "sortOrder": 1,
+        "updatedAt": "2021-01-25 12:45:59",
+        "createdAt": "2021-01-25 12:42:42",
+        "technicalCard": {
+            "id": 3,
+            "name": "Сырный бортик",
+            "weight": 100,
+            "proteins": 20,
+            "fats": 100,
+            "carbohydrates": 100,
+            "calories": 300,
+            "composition": "Сыр под тесто",
+            "compositionForCook": "Завернуть в края теста сыр",
+            "chefComment": "Смешай то то с тем то",
+            "cookingType": "baked",
+            "dishType": "pizza",
+            "manufacturerType": "hot",
+            "termTime": 10,
+            "timeToCool": 180,
+            "cookingTime": 20,
+            "hasTerm": true,
+            "status": true,
+            "sortOrder": 1,
+            "createdAt": "2021-01-25 12:35:08",
+            "updatedAt": "2021-01-25 12:35:08"
+        }
+    }
+}

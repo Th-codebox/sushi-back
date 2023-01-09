@@ -1,0 +1,26 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "ролл филадельфия",
+        "weight": 500,
+        "proteins": 300,
+        "fats": 50,
+        "carbohydrates": 200,
+        "calories": 180,
+        "composition": "Рыба, рис, огурец",
+        "compositionForCook": "Рис и рыба и готовить",
+        "chefComment": "Смешай то то с тем то",
+        "cookingType": "baked",
+        "dishType": "roll",
+        "manufacturerType": "hot",
+        "termTime": 10,
+        "timeToCool": 180,
+        "cookingTime": 20,
+        "hasTerm": true,
+        "status": true,
+        "sortOrder": 1,
+        "createdAt": "2021-01-21 09:08:11",
+        "updatedAt": "2021-01-21 09:08:11"
+    }
+}

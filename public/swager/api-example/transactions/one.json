@@ -1,0 +1,23 @@
+{
+    "code": 200,
+    "data": {
+        "id": 1,
+        "name": "2 чека",
+        "price": 150,
+        "paymentType": "terminal",
+        "operationType": "send",
+        "status": "completed",
+        "quantityChecks": 2,
+        "date": 1612828800,
+        "courier": {
+            "id": 2,
+            "name": "тестовый курьер",
+            "phone": "79878734280",
+            "image": null,
+            "email": "courier@example.com",
+            "status": 1,
+            "createdAt": "2021-02-09 10:11:22",
+            "updatedAt": "2021-02-09 10:11:22"
+        }
+    }
+}

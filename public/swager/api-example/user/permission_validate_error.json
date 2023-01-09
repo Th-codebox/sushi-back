@@ -1,0 +1,8 @@
+{
+    "message": "Invalid parameters",
+    "data": {
+        "permissions": [
+            "permissionId is required key in permissions array"
+        ]
+    }
+}

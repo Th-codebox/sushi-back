@@ -1,0 +1,212 @@
+{
+    "items": [
+        {
+            "id": 30,
+            "name": "Просмотр пользвателей",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "UserController",
+            "method": "index",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 31,
+            "name": "Просмотр пользвателей",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "UserController",
+            "method": "show",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 32,
+            "name": "Создание пользвателей",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "UserController",
+            "method": "store",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 33,
+            "name": "Изменение пользвателей",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "UserController",
+            "method": "update",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 34,
+            "name": "Удаление пользвателей",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "UserController",
+            "method": "destroy",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 35,
+            "name": "Добавление ролей пользвателю",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "UserController",
+            "method": "savePermissions",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 36,
+            "name": "Просмотр прав доступа",
+            "namespace": "App\/Http\/Controllers\/CRM\/System",
+            "controller": "PermissionController",
+            "method": "index",
+            "group": "main",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 37,
+            "name": "Просмотр категорий",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CategoryController",
+            "method": "index",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 38,
+            "name": "Просмотр категории",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CategoryController",
+            "method": "show",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 39,
+            "name": "Создание категории",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CategoryController",
+            "method": "store",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 40,
+            "name": "Изменение категории",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CategoryController",
+            "method": "update",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 41,
+            "name": "Удаление категории",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CategoryController",
+            "method": "destroy",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 42,
+            "name": "Просмотр наборов",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CollectionController",
+            "method": "index",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 43,
+            "name": "Просмотр набора",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CollectionController",
+            "method": "show",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 44,
+            "name": "Создание набора",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CollectionController",
+            "method": "store",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 45,
+            "name": "Изменение набора",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CollectionController",
+            "method": "update",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 46,
+            "name": "Удаление набора",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "CollectionController",
+            "method": "destroy",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 47,
+            "name": "Просмотр продуктов",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "ProductController",
+            "method": "index",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 48,
+            "name": "Просмотр продукта",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "ProductController",
+            "method": "show",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        },
+        {
+            "id": 49,
+            "name": "Создание продукта",
+            "namespace": "App\/Http\/Controllers\/CRM\/Store",
+            "controller": "ProductController",
+            "method": "store",
+            "group": "store",
+            "sort_order": 0,
+            "status": 1
+        }
+    ],
+    "meta": {
+        "total": 22,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

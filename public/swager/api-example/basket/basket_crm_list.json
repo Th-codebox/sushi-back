@@ -1,0 +1,249 @@
+{
+    "code": 200,
+    "items": [
+        {
+            "id": 1,
+            "promoCode": "VSE 10",
+            "deliveryPrice": {
+                "amount": "0",
+                "currency": "RUB",
+                "formatted": "0,00 ₽"
+            },
+            "deliveryType": "delivery",
+            "totalPrice": {
+                "amount": "0",
+                "currency": "RUB",
+                "formatted": "0,00 ₽"
+            },
+            "paymentType": "terminal",
+            "basketSource": "crm",
+            "clientSource": "yandex.ru",
+            "dateDelivery": "2021-02-15",
+            "timeDelivery": "22-00",
+            "commentForCourier": "Домофон не работает",
+            "clientMoney": {
+                "amount": "2000",
+                "currency": "RUB",
+                "formatted": "20,00 ₽"
+            },
+            "persons": 4,
+            "comment": "Правый ролл слева без сыра",
+            "noCall": false,
+            "clientAddress": null,
+            "items": [],
+            "createdAt": "2021-01-28 11:38:37",
+            "updatedAt": "2021-01-28 11:38:37"
+        },
+        {
+            "id": 2,
+            "promoCode": "VSE 10",
+            "deliveryPrice": {
+                "amount": "0",
+                "currency": "RUB",
+                "formatted": "0,00 ₽"
+            },
+            "deliveryType": "delivery",
+            "totalPrice": {
+                "amount": "1557000",
+                "currency": "RUB",
+                "formatted": "15 570,00 ₽"
+            },
+            "paymentType": "terminal",
+            "basketSource": "crm",
+            "clientSource": "yandex.ru",
+            "dateDelivery": "2021-02-15",
+            "timeDelivery": "22-00",
+            "commentForCourier": "Домофон не работает",
+            "clientMoney": {
+                "amount": "2000",
+                "currency": "RUB",
+                "formatted": "20,00 ₽"
+            },
+            "persons": 4,
+            "comment": "Правый ролл слева без сыра",
+            "noCall": false,
+            "clientAddress": null,
+            "items": [
+                {
+                    "id": 1,
+                    "quantity": 5,
+                    "price": {
+                        "amount": "1550000",
+                        "currency": "RUB",
+                        "formatted": "15 500,00 ₽"
+                    },
+                    "menuItem": {
+                        "id": 2,
+                        "name": "Ролл Калифорния с Крабом",
+                        "slug": "roll-cali-crab",
+                        "description": "Крабовые палочки с майонезом, соус хондаши, огурец, авокадо, икра тобико оранжевая.",
+                        "h1": "h1",
+                        "metaTitle": "Ролл Калифорния с крабом",
+                        "metaDescription": "Описание мета",
+                        "price": {
+                            "amount": "20000",
+                            "currency": "RUB",
+                            "formatted": "200,00 ₽"
+                        },
+                        "oldPrice": {
+                            "amount": "25000",
+                            "currency": "RUB",
+                            "formatted": "250,00 ₽"
+                        },
+                        "bonusAdd": 10,
+                        "stickerType": "child",
+                        "stickerMarketing": "hit",
+                        "image": null,
+                        "composition": "Крабовые палочки с майонезом, соус хондаши, огурец, авокадо, икра тобико оранжевая.",
+                        "status": true,
+                        "hasStop": false,
+                        "sortOrder": 1,
+                        "createdAt": "2021-01-27 18:46:52",
+                        "updatedAt": "2021-01-27 18:46:52",
+                        "modifications": [
+                            {
+                                "id": 2,
+                                "actualPrice": {
+                                    "amount": "310000",
+                                    "currency": "RUB",
+                                    "formatted": "3 100,00 ₽"
+                                },
+                                "actualCharacteristicTechCard": {
+                                    "weight": 95,
+                                    "proteins": 2,
+                                    "fats": 2,
+                                    "carbohydrates": 9,
+                                    "calories": 70
+                                },
+                                "priceRate": 0.5,
+                                "priceAdd": {
+                                    "amount": "300000",
+                                    "currency": "RUB",
+                                    "formatted": "3 000,00 ₽"
+                                },
+                                "status": false,
+                                "sortOrder": 0,
+                                "updatedAt": "2021-01-27 18:46:52",
+                                "createdAt": "2021-01-27 18:46:52",
+                                "modification": {
+                                    "id": 2,
+                                    "name": "Половинка",
+                                    "description": "Половинит ролл",
+                                    "action": "subtract",
+                                    "type": "select",
+                                    "priceRate": 0.5,
+                                    "priceAdd": {
+                                        "amount": "3000",
+                                        "currency": "RUB",
+                                        "formatted": "30,00 ₽"
+                                    },
+                                    "nameOff": "целый",
+                                    "nameOn": "половина",
+                                    "status": true,
+                                    "sortOrder": 1,
+                                    "updatedAt": "2021-01-27 18:44:11",
+                                    "createdAt": "2021-01-27 18:44:11",
+                                    "technicalCard": {
+                                        "id": 0,
+                                        "name": "",
+                                        "weight": 95,
+                                        "proteins": 2,
+                                        "fats": 2,
+                                        "carbohydrates": 9,
+                                        "calories": 70,
+                                        "composition": "",
+                                        "compositionForCook": "",
+                                        "chefComment": "",
+                                        "cookingType": "",
+                                        "dishType": "",
+                                        "manufacturerType": "",
+                                        "termTime": 0,
+                                        "timeToCool": 0,
+                                        "cookingTime": 0,
+                                        "hasTerm": false,
+                                        "status": false,
+                                        "sortOrder": 0,
+                                        "createdAt": null,
+                                        "updatedAt": null
+                                    }
+                                }
+                            }
+                        ],
+                        "technicalCard": {
+                            "id": 2,
+                            "name": "Калифорния с крабом",
+                            "weight": 190,
+                            "proteins": 5,
+                            "fats": 5,
+                            "carbohydrates": 18,
+                            "calories": 140,
+                            "composition": "Крабовые палочки с майонезом, соус хондаши, огурец, авокадо, икра тобико оранжевая.",
+                            "compositionForCook": "Крабовые палочки с майонезом, соус хондаши, огурец, авокадо, икра тобико оранжевая.",
+                            "chefComment": "",
+                            "cookingType": "cold",
+                            "dishType": "roll",
+                            "manufacturerType": "cold",
+                            "termTime": 15,
+                            "timeToCool": 30,
+                            "cookingTime": 0,
+                            "hasTerm": false,
+                            "status": true,
+                            "sortOrder": 1,
+                            "createdAt": "2021-01-27 17:41:27",
+                            "updatedAt": "2021-01-27 17:41:27"
+                        }
+                    }
+                },
+                {
+                    "id": 2,
+                    "quantity": 1,
+                    "price": {
+                        "amount": "7000",
+                        "currency": "RUB",
+                        "formatted": "70,00 ₽"
+                    },
+                    "menuItem": {
+                        "id": 3,
+                        "name": "Суши с лососем",
+                        "slug": "sushi-losos",
+                        "description": "Классический суси с лососем.",
+                        "h1": "h1",
+                        "metaTitle": "Суши с лососем вкусно",
+                        "metaDescription": "Классический суси с лососем.",
+                        "price": {
+                            "amount": "7000",
+                            "currency": "RUB",
+                            "formatted": "70,00 ₽"
+                        },
+                        "oldPrice": {
+                            "amount": "8000",
+                            "currency": "RUB",
+                            "formatted": "80,00 ₽"
+                        },
+                        "bonusAdd": 5,
+                        "stickerType": "",
+                        "stickerMarketing": "new",
+                        "image": null,
+                        "composition": "Классический суси с лососем.",
+                        "status": true,
+                        "hasStop": false,
+                        "sortOrder": 1,
+                        "createdAt": "2021-01-27 18:48:21",
+                        "updatedAt": "2021-01-27 18:48:21",
+                        "modifications": []
+                    }
+                }
+            ],
+            "createdAt": "2021-01-28 11:39:15",
+            "updatedAt": "2021-01-28 11:39:15"
+        }
+    ],
+    "meta": {
+        "total": 2,
+        "offset": 0,
+        "limit": 20,
+        "payload": {
+            "page": "1"
+        }
+    }
+}

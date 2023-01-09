@@ -1,0 +1,320 @@
+openapi: 3.0.0
+info:
+  title: 'Суши Фокс REST API для кухни'
+  description: ''
+  contact:
+    email: dev@sushifox.ru
+  version: 0.0.1
+servers:
+  - url: 'http://api.sushifox.ru/crm'
+    description: 'API sushi fox server'
+  - url: 'http://localhost/crm'
+    description: 'local server'
+  - url: 'https://test.sushifox.ru/crm'
+    description: 'local server 2'
+
+components:
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+security:
+  - bearerAuth: [ ]
+
+paths:
+
+  /auth/login:
+    post:
+      tags:
+        - 'Авторизация пользователя'
+      summary: 'Авторизовать клиента'
+      description: 'Авторизовывает клиента по номеру телефона и паролю, отдаёт Brearer token'
+      operationId: Userlogin
+      requestBody:
+        description: 'Пример запроса'
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - phone
+                - password
+              properties:
+                phone:
+                  type: string
+                  example: '79228109900'
+                password:
+                  type: string
+                  example: 'password'
+              type: object
+      responses:
+        200:
+          description: 'Успешный вход'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/CRM/login.json
+        422:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/invalid_request.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Пользователь не активирован'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_client/not_active.json
+  /auth/me:
+    post:
+      tags:
+        - 'Авторизация пользователя'
+      summary: 'Получить данные пользователя'
+      description: 'Возвращает данные пользователе'
+      operationId: UserMe
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_client/me.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+  /auth/refresh:
+    post:
+      tags:
+        - 'Авторизация пользователя'
+      summary: 'Возвращает обновленный токен доступа'
+      description: 'Обновление токена доступа'
+      operationId: tokenRefresh
+      responses:
+        200:
+          description: 'Токен успешно обновлён'
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/login_success.json'
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                item:
+                  $ref: '../api-example/auth_fail.json'
+  /auth/logout:
+    post:
+      tags:
+        - 'Авторизация пользователя'
+      summary: 'Выйти из системы'
+      description: 'Логаут для текущего юзера'
+      operationId: Userlogout
+      responses:
+        200:
+          description: 'Выход успешен'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/logout.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+
+  /tablet/getColds:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Получить список холодных блюд'
+      description: 'Возвращает список холодных блюд'
+      operationId: getColds
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/tablet/colds.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Не разрешено! В доступе отказано'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/access_denied.json
+  /tablet/completeCold/{id}:
+    post:
+      tags:
+        - 'Заказы'
+      summary: 'Завершить готовку холодных блюд'
+      description: 'Завершить готовку холодных блюд'
+      operationId: completeCold
+      parameters:
+        - name: 'id'
+          in: path
+          description: 'Id заказа'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/tablet/completeHot.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Не разрешено! В доступе отказано'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/access_denied.json
+  /tablet/getHots:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Получить список горячих блюд'
+      description: 'Возвращает список горячих блюд'
+      operationId: getHots
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/tablet/hots.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Не разрешено! В доступе отказано'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/access_denied.json
+  /tablet/completeHot/{id}:
+    post:
+      tags:
+        - 'Заказы'
+      summary: 'Завершить готовку горячих блюд'
+      description: 'Завершить готовку горячих блюд'
+      operationId: completeHot
+      parameters:
+        - name: 'id'
+          in: path
+          description: 'Id заказа'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/tablet/completeHot.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Не разрешено! В доступе отказано'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/access_denied.json
+  /tablet/getAssemblies:
+    get:
+      tags:
+        - 'Заказы'
+      summary: 'Получить список  блюд в сборке'
+      description: 'Возвращает список блюдв сборке'
+      operationId: getAssembly
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/tablet/assembly.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Не разрешено! В доступе отказано'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/access_denied.json
+
+  /tablet/comleteAssembly/{id}:
+    post:
+      tags:
+        - 'Заказы'
+      summary: 'Завершить сборку блюд'
+      description: 'Завершить сборку блюд'
+      operationId: completeAssembly
+      parameters:
+        - name: 'id'
+          in: path
+          description: 'Id заказа'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Успешный ответ'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/tablet/completeHot.json
+        401:
+          description: Неавторизованный
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/auth_fail.json
+        403:
+          description: 'Не разрешено! В доступе отказано'
+          content:
+            application/json:
+              examples:
+                - $ref: ../api-example/access_denied.json
+tags:
+  - name: 'Авторизация пользователя'
+  - name: 'Заказы'
+

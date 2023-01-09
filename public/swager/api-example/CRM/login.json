@@ -1,0 +1,27 @@
+{
+    "code": 200,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkuc3VzaGlmb3gucnVcL2NybVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTA5ODE4MjIsImV4cCI6MTYxMDk4NTQyMiwibmJmIjoxNjEwOTgxODIyLCJqdGkiOiJyVGlpOFE5OGYyQXIwcGM0Iiwic3ViIjoxLCJwcnYiOiI3Y2M5MzZkYjZjOTZkM2Q5MDQ2Nzk4OTNkNDM3OGZjYmM3NmUyMTFmIn0.b24qLvzqxAYSDGQ3KZGtCNb9Klhd8bV7INPDcZgeqSY",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "data": {
+        "id": 1,
+        "name": "admin",
+        "phone": "79228109900",
+        "image": null,
+        "email": "mail@example.com",
+        "status": 1,
+        "createdAt": "2021-01-17 12:21:38",
+        "updatedAt": "2021-01-17 12:21:38",
+        "role": {
+            "id": 1,
+            "name": "super admin",
+            "description": null,
+            "sortOrder": 0,
+            "status": 1,
+            "createdAt": "2021-01-17 12:21:38",
+            "updatedAt": "2021-01-17 12:21:38"
+        },
+        "filials": [],
+        "docs": []
+    }
+}

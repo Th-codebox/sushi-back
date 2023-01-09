@@ -1,0 +1,19 @@
+{
+    "message": "Invalid parameters",
+    "data": {
+        "phone": [
+            "The phone field is required."
+        ],
+        "email": [
+            "The email field is required."
+        ],
+        "password": [
+            "The password field is required."
+        ],
+        "name": [
+            "The name field is required."
+        ]
+    }
+}
+
+Response code: 422 (Unprocessable Entity); Time: 413ms; Content length: 209 bytes
